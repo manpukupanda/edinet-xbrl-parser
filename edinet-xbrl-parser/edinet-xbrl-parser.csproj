@@ -17,6 +17,11 @@
     <PackageTags>edinet;xbrl;financial-disclosure;parser;csharp;dto;immutable;semantic;structured-data</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.nuget.md</PackageReadmeFile>
+    <Description>This library is a .NET class library designed to parse XBRL data disclosed via [EDINET](https://submit2.edinet-fsa.go.jp/), Japan’s electronic disclosure system operated by the Financial Services Agency.
+Its purpose is to extract and transform XBRL files into programmatically accessible structures for further use in applications.
+
+このライブラリは、[EDINET](https://submit2.edinet-fsa.go.jp/)にて開示される XBRL データをパースするための .NET クラスライブラリです。
+金融庁が提供する電子開示システムから取得した XBRL ファイルを解析し、プログラム上で扱いやすい構造に変換することを目的としています。</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +32,7 @@
     <None Update="README.nuget.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
