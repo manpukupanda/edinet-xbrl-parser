@@ -1,20 +1,33 @@
-﻿using System.Net;
-using System.Xml.Linq;
+﻿namespace Manpuku.Edinet.Xbrl;
 
-namespace Manpuku.Edinet.Xbrl;
-
-public class XBRLDocumentTree
+/// <summary>
+/// Represents a tree of related XBRL documents.
+/// Holds the root node and provides DFS enumeration of all nodes in the tree.
+/// </summary>
+public class DocumentTree
 {
-    internal XBRLDocumentTree(XBRLDocumentTreeNode root)
+    /// <summary>
+    /// Internal constructor. Sets the root node.
+    /// </summary>
+    internal DocumentTree(DocumentTreeNode root)
     {
         Root = root;
     }
 
-    public XBRLDocumentTreeNode Root { get; private set; }
+    /// <summary>
+    /// The root node of the document tree.
+    /// </summary>
+    public DocumentTreeNode Root { get; private set; }
 
-    public IEnumerable<XBRLDocumentTreeNode> Nodes => TraverseDfs(Root);
+    /// <summary>
+    /// Enumerates all nodes in the tree in depth-first order (root included).
+    /// </summary>
+    public IEnumerable<DocumentTreeNode> Nodes => TraverseDfs(Root);
 
-    private static IEnumerable<XBRLDocumentTreeNode> TraverseDfs(XBRLDocumentTreeNode node)
+    /// <summary>
+    /// Helper that traverses nodes in depth-first order.
+    /// </summary>
+    private static IEnumerable<DocumentTreeNode> TraverseDfs(DocumentTreeNode node)
     {
         yield return node;
         foreach (var child in node.Children)
@@ -26,117 +39,3 @@ public class XBRLDocumentTree
         }
     }
 }
-
-/// <summary>
-/// ドキュメント構成をツリーで表すときに、ノードを示す
-/// </summary>
-public class XBRLDocumentTreeNode
-{
-    /// <summary>
-    /// ドキュメントの種類
-    /// </summary>
-    public enum DocumentKind
-    {
-        /// <summary>
-        /// その他
-        /// </summary>
-        Other,
-
-        /// <summary>
-        /// タクソノミ
-        /// </summary>
-        TaxonomySchema,
-
-        /// <summary>
-        /// インスタンス
-        /// </summary>
-        Instance,
-
-        /// <summary>
-        /// リンクベース
-        /// </summary>
-        Linkbase,
-    }
-
-    /// <summary>
-    /// ドキュメントの種類を判別する
-    /// </summary>
-    /// <param name="doc"></param>
-    /// <returns></returns>
-    internal static DocumentKind KindOf(XDocument doc)
-    {
-        if (doc.Root?.Name == XbrlNamespaces.xbrliXbrl)
-            return DocumentKind.Instance;
-        else if (doc.Root?.Name == XbrlNamespaces.xsdSchema)
-            return DocumentKind.TaxonomySchema;
-        else if (doc.Root?.Name == XbrlNamespaces.linkLinkbase)
-            return DocumentKind.Linkbase;
-        else
-            return DocumentKind.Other;
-    }
-
-    internal XBRLDocumentTreeNode(Uri uri, XDocument document, XBRLDocumentTreeNode? parent)
-    {
-        URI = uri;
-        Document = document;
-        Parent = parent;
-        NodeKind = KindOf(Document);
-    }
-
-    /// <summary>
-    /// ドキュメントのURI
-    /// </summary>
-    public Uri URI { get; private set; }
-
-    /// <summary>
-    /// ドキュメント
-    /// </summary>
-    public XDocument Document { get; private set; }
-
-    /// <summary>
-    /// ドキュメントの親ノード
-    /// </summary>
-    public XBRLDocumentTreeNode? Parent { get; private set; }
-
-    /// <summary>
-    /// ルートからの距離
-    /// </summary>
-    public int Distance
-    {
-        get
-        {
-            if (Parent == null) return 0;
-            return 1 + Parent.Distance;
-        }
-    }
-
-    /// <summary>
-    /// 祖先を取得する
-    /// </summary>
-    public IEnumerable<XBRLDocumentTreeNode> Ancestors
-    {
-        get
-        {
-            for (var n = Parent; n != null; n = n.Parent)
-            {
-                yield return n;
-            }
-        }
-    }
-
-    /// <summary>
-    /// ドキュメントの種別を取得する
-    /// </summary>
-    public DocumentKind NodeKind { get; private set; }
-
-    public XBRLDocumentTreeNode[] SchemaRefs { get; internal set; } = [];
-
-    public XBRLDocumentTreeNode[] Imports { get; internal set; } = [];
-
-    public XBRLDocumentTreeNode[] LinkbaseRefs { get; internal set; } = [];
-
-    public XBRLDocumentTreeNode[] Locs { get; internal set; } = [];
-
-    public XBRLDocumentTreeNode[] Children => [.. SchemaRefs.Concat(Imports).Concat(LinkbaseRefs).Concat(Locs)];
-}
-

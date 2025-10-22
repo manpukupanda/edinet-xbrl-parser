@@ -10,8 +10,16 @@ internal class XbrlSchemaParser
 
     readonly ILogger _logger;
 
+    /// <summary>
+    /// The discoverable taxonomy set (DTS) that this parser populates with elements and role types.
+    /// </summary>
     public XBRLDiscoverableTaxonomySet Dts { get; init; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="XbrlSchemaParser"/> class.
+    /// </summary>
+    /// <param name="dts">The discoverable taxonomy set to populate.</param>
+    /// <param name="loggerFactory">Logger factory used to create loggers for diagnostics.</param>
     public XbrlSchemaParser(XBRLDiscoverableTaxonomySet dts, ILoggerFactory loggerFactory)
     {
         Dts = dts;
@@ -19,6 +27,9 @@ internal class XbrlSchemaParser
         _logger = _loggerFactory.CreateLogger<XbrlSchemaParser>();
     }
 
+    /// <summary>
+    /// Parse taxonomy schema documents in the DTS and populate the DTS with discovered elements and role types.
+    /// </summary>
     public void Parse()
     {
         Dts.Elements = [.. ParseElement()];
@@ -32,7 +43,7 @@ internal class XbrlSchemaParser
     {
         var result = new List<Element>();
 
-        var documents = Dts.GetDocuments(XBRLDocumentTreeNode.DocumentKind.TaxonomySchema);
+        var documents = Dts.GetDocuments(DocumentTreeNode.DocumentKind.TaxonomySchema);
 
         foreach (var doc in documents)
         {
@@ -135,7 +146,7 @@ internal class XbrlSchemaParser
     {
         var result = new List<RoleType>();
 
-        foreach (var document in Dts.GetDocuments(XBRLDocumentTreeNode.DocumentKind.TaxonomySchema))
+        foreach (var document in Dts.GetDocuments(DocumentTreeNode.DocumentKind.TaxonomySchema))
         {
             var root = document.Root;
             if (root is not XElement) continue;
@@ -158,13 +169,13 @@ internal class XbrlSchemaParser
             }
         }
 
-        result.Add(new RoleType(Dts, XBRLItem.DummyElement)
+        result.Add(new RoleType(Dts, XbrlItem.DummyElement)
         {
             Definition = null,
             RoleURI = XbrlNamespaces.DefaultLinkRole,
             UsedOns = [],
         });
-        result.Add(new RoleType(Dts, XBRLItem.DummyElement)
+        result.Add(new RoleType(Dts, XbrlItem.DummyElement)
         {
             Definition = null,
             RoleURI = XbrlNamespaces.DefaultLinkRole2008,

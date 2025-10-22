@@ -3,53 +3,66 @@
 namespace Manpuku.Edinet.Xbrl;
 
 /// <summary>
-/// XBRLファクト
+/// Represents a single XBRL fact value (numeric or non-numeric) associated with an element.
 /// </summary>
-public class Fact : XBRLItem
+public class Fact : XbrlItem
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Fact"/> class.
+    /// </summary>
+    /// <param name="dts">The discoverable taxonomy set this fact belongs to.</param>
+    /// <param name="xml">The XML element representing this fact.</param>
     public Fact(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 
     /// <summary>
-    /// 要素
+    /// Gets the element definition for this fact.
     /// </summary>
     public required Element Element { get; init; }
 
     /// <summary>
-    /// 値
+    /// Gets the textual value of the fact, or null if the fact is nil.
     /// </summary>
     public required string? Value { get; init; }
 
     /// <summary>
-    /// コンテキスト
+    /// Gets the context associated with this fact. For tuples this may be null.
     /// </summary>
-    /// <remarks>Tupleの場合、コンテキストが存在しないのでnull。Tuple以外の場合はnullは設定されない。</remarks>
+    /// <remarks>Tuple facts do not have a context; non-tuple facts will have a context.</remarks>
     public required Context? Context { get; init; }
 
     /// <summary>
-    /// ユニット
+    /// Gets the unit associated with this fact, if any (for numeric facts).
     /// </summary>
     public required Unit? Unit { get; init; }
 
     /// <summary>
-    /// nil値
+    /// Gets a value indicating whether the fact is explicitly marked as nil (xsi:nil="true").
     /// </summary>
     public required bool Nil { get; init; }
 
     /// <summary>
-    /// decimals属性値
+    /// Gets the value of the decimals attribute, if provided.
     /// </summary>
     public required int? Decimals { get; init; }
 }
 
 /// <summary>
-/// タプル
+/// Represents a tuple fact that contains nested member facts.
 /// </summary>
 public class TupleFact : Fact
 {
+    /// <summary>
+    /// Gets the member facts contained by the tuple.
+    /// </summary>
     public required Fact[] MemberFacts { get; init; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="TupleFact"/> class.
+    /// </summary>
+    /// <param name="dts">The discoverable taxonomy set this tuple fact belongs to.</param>
+    /// <param name="xml">The XML element representing this tuple fact.</param>
     public TupleFact(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }

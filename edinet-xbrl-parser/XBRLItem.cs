@@ -2,34 +2,42 @@
 
 namespace Manpuku.Edinet.Xbrl;
 
-public class XBRLItem
+/// <summary>
+/// Base class for items found in XBRL taxonomies and instances (elements, labels, arcs, etc.).
+/// </summary>
+public class XbrlItem
 {
-	/// <summary>
-	/// 属するDTS
-	/// </summary>
-	public XBRLDiscoverableTaxonomySet Dts { get; init; }
-
-	/// <summary>
-	/// URI
-	/// </summary>
-	public Uri? URI { get; init; }
+    /// <summary>
+    /// Gets the discoverable taxonomy set to which this item belongs.
+    /// </summary>
+    public XBRLDiscoverableTaxonomySet Dts { get; init; }
 
     /// <summary>
-    /// XML片
+    /// Gets the base URI of the document that contains this item, if available.
+    /// </summary>
+    public Uri? URI { get; init; }
+
+    /// <summary>
+    /// Gets the underlying XML fragment for this item.
     /// </summary>
     public XElement Xml { get; init; }
 
     /// <summary>
-    /// XML片のid属性
+    /// Gets the value of the 'id' attribute on the XML fragment, if present.
     /// </summary>
     public string? Id { get; init; }
 
-    public XBRLItem(XBRLDiscoverableTaxonomySet dts, XElement xml)
-	{
-		Dts = dts;
-		Xml = xml;
-		URI = xml.Document == null ? null : Dts.GetUriFor(xml.Document);
-		Id = Xml.AttributeString("id");
+    /// <summary>
+    /// Initializes a new instance of the <see cref="XbrlItem"/> class.
+    /// </summary>
+    /// <param name="dts">The discoverable taxonomy set this item belongs to.</param>
+    /// <param name="xml">The XML element representing this item.</param>
+    public XbrlItem(XBRLDiscoverableTaxonomySet dts, XElement xml)
+    {
+        Dts = dts;
+        Xml = xml;
+        URI = xml.Document == null ? null : Dts.GetUriFor(xml.Document);
+        Id = Xml.AttributeString("id");
     }
 
     internal Uri ReferenceUri

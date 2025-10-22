@@ -2,8 +2,16 @@
 
 namespace Manpuku.Edinet.Xbrl;
 
-public class Unit : XBRLItem
+/// <summary>
+/// Represents a unit definition in an XBRL instance or taxonomy.
+/// </summary>
+public class Unit : XbrlItem
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Unit"/> class.
+    /// </summary>
+    /// <param name="dts">The discoverable taxonomy set this unit belongs to.</param>
+    /// <param name="xml">The XML element representing this unit.</param>
     public Unit(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }

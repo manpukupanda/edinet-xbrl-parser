@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
-using static Manpuku.Edinet.Xbrl.XBRLDocumentTreeNode;
+using static Manpuku.Edinet.Xbrl.DocumentTreeNode;
 
 namespace Manpuku.Edinet.Xbrl;
 
@@ -18,13 +18,13 @@ internal class DocumentTreeLoader
         _loadAsync = loadAsync;
     }
 
-    public async Task<XBRLDocumentTree> CreateAsync(Uri uri, XBRLDocumentTreeNode? parent)
+    public async Task<DocumentTree> CreateAsync(Uri uri, DocumentTreeNode? parent)
     {
         var root = await CreateNodeAsync(uri, parent);
-        return new XBRLDocumentTree(root);
+        return new DocumentTree(root);
     }
 
-    async Task<XBRLDocumentTreeNode> CreateNodeAsync(Uri uri, XBRLDocumentTreeNode? parent)
+    async Task<DocumentTreeNode> CreateNodeAsync(Uri uri, DocumentTreeNode? parent)
     {
         _logger.LogTrace("Load: {uri}", uri);
         var document = await _loadAsync(uri);
@@ -33,7 +33,7 @@ internal class DocumentTreeLoader
             throw new InvalidDataException($"Document root is null. {uri}");
         }
 
-        var node = new XBRLDocumentTreeNode(uri, document, parent);
+        var node = new DocumentTreeNode(uri, document, parent);
         if (node.NodeKind == DocumentKind.Instance)
         {
             node.SchemaRefs = await CreateChildrenAsync(
@@ -78,20 +78,20 @@ internal class DocumentTreeLoader
             });
 
             var results = await Task.WhenAll(tasks);
-            node.Locs = [.. results.OfType<XBRLDocumentTreeNode>()];
+            node.Locs = [.. results.OfType<DocumentTreeNode>()];
         }
 
         return node;
     }
 
-    async Task<XBRLDocumentTreeNode[]> CreateChildrenAsync(XBRLDocumentTreeNode node, IEnumerable<XElement> elements, XName hrefOrLocation)
+    async Task<DocumentTreeNode[]> CreateChildrenAsync(DocumentTreeNode node, IEnumerable<XElement> elements, XName hrefOrLocation)
     {
         var tasks = elements.Select(e => CreateChildAsync(node, e, hrefOrLocation)).ToArray();
 
         try
         {
             var results = await Task.WhenAll(tasks);
-            return [.. results.OfType<XBRLDocumentTreeNode>()];
+            return [.. results.OfType<DocumentTreeNode>()];
         }
         catch (Exception ex)
         {
@@ -100,7 +100,7 @@ internal class DocumentTreeLoader
         }
     }
 
-    async Task<XBRLDocumentTreeNode?> CreateChildAsync(XBRLDocumentTreeNode node, XElement xml, XName name)
+    async Task<DocumentTreeNode?> CreateChildAsync(DocumentTreeNode node, XElement xml, XName name)
     {
         if (xml.Attribute(name) == null) return null;
 
@@ -108,7 +108,7 @@ internal class DocumentTreeLoader
         return await CreateChildAsync(node, u);
     }
 
-    async Task<XBRLDocumentTreeNode?> CreateChildAsync(XBRLDocumentTreeNode node, Uri u)
+    async Task<DocumentTreeNode?> CreateChildAsync(DocumentTreeNode node, Uri u)
     {
         if (Regex.IsMatch(u.AbsoluteUri, @"https?://(www\.)?xbrl\.org/"))
         {

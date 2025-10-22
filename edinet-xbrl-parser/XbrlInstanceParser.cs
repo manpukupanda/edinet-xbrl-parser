@@ -1,11 +1,5 @@
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Xml.Linq;
-using static Manpuku.Edinet.Xbrl.Arc;
-using static Manpuku.Edinet.Xbrl.Element;
 
 namespace Manpuku.Edinet.Xbrl;
 
@@ -39,7 +33,7 @@ internal class XbrlInstanceParser
     protected virtual IEnumerable<Context> ParseContext()
     {
         var result = new List<Context>();
-        var documents = Dts.GetDocuments(XBRLDocumentTreeNode.DocumentKind.Instance);
+        var documents = Dts.GetDocuments(DocumentTreeNode.DocumentKind.Instance);
 
         foreach (var document in documents)
         {
@@ -103,14 +97,14 @@ internal class XbrlInstanceParser
             if (dimensionElement == null)
             {
                 var (code, message) = XbrlErrorCatalog.ElementNotFound(dimensionName.ToString());
-                throw new XbrlSyntaxException(code, message);
+                throw new XbrlSemanticException(code, message);
             }
 
             var memberElement = Dts.GetElement(valueName);
             if (memberElement == null)
             {
                 var (code, message) = XbrlErrorCatalog.ElementNotFound(valueName.ToString());
-                throw new XbrlSyntaxException(code, message);
+                throw new XbrlSemanticException(code, message);
             }
 
             tmp.Add(new Context.ExplicitMember() { Dimension = dimensionElement, Member = memberElement });
@@ -122,7 +116,7 @@ internal class XbrlInstanceParser
     {
         var result = new List<Unit>();
 
-        var documents = Dts.GetDocuments(XBRLDocumentTreeNode.DocumentKind.Instance);
+        var documents = Dts.GetDocuments(DocumentTreeNode.DocumentKind.Instance);
         foreach (var document in documents)
         {
             var elements = document.Descendants(XbrlNamespaces.xbrliUnit);
@@ -140,7 +134,7 @@ internal class XbrlInstanceParser
     {
         var result = new List<Fact>();
 
-        var documents = Dts.GetDocuments(XBRLDocumentTreeNode.DocumentKind.Instance);
+        var documents = Dts.GetDocuments(DocumentTreeNode.DocumentKind.Instance);
         foreach (var doc in documents)
         {
             var root = doc.Root;
@@ -167,7 +161,7 @@ internal class XbrlInstanceParser
         if (element == null)
         {
             var (code, message) = XbrlErrorCatalog.ElementNotFound(xml.Name.ToString());
-            throw new XbrlSyntaxException(code, message);
+            throw new XbrlSemanticException(code, message);
         }
         var value = xml.Value;
         var nil = ParseNil(xml);
@@ -220,7 +214,7 @@ internal class XbrlInstanceParser
         if (context == null)
         {
             var (code, message) = XbrlErrorCatalog.ContextNotFound(contextRef);
-            throw new XbrlSyntaxException(code, message);
+            throw new XbrlSemanticException(code, message);
         }
         return context;
     }

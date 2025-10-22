@@ -1,15 +1,21 @@
-﻿using System.Collections.Immutable;
+﻿namespace Manpuku.Edinet.Xbrl;
 
-namespace Manpuku.Edinet.Xbrl;
-
+/// <summary>
+/// Represents a tree structure of XBRL linkbase relationships for a specific role type and link kind.
+/// </summary>
+/// <remarks>A LinkTree models the hierarchical relationships defined in an XBRL linkbase, such as presentation,
+/// definition, or calculation links, for a given role type. It provides access to the root nodes of the tree and allows
+/// traversal of the entire structure. This class is typically used to analyze or process the relationships between XBRL
+/// taxonomy elements as defined by a particular linkbase and role. The tree structure reflects the directed
+/// relationships between XBRL items, enabling depth-first enumeration and access to node and edge metadata.</remarks>
 public class LinkTree
 {
     internal class Relation
     {
         public Arc Arc { get; set; }
-        public XBRLItem From { get; set; }
-        public XBRLItem To { get; set; }
-        public Relation(Arc arc, XBRLItem from, XBRLItem to)
+        public XbrlItem From { get; set; }
+        public XbrlItem To { get; set; }
+        public Relation(Arc arc, XbrlItem from, XbrlItem to)
         {
             Arc = arc;
             From = from;
@@ -18,9 +24,9 @@ public class LinkTree
     }
 
     /// <summary>
-    /// リソース(From)をキーにして、全関係を分類
+    /// Represents a tree structure of XBRL linkbase relationships for a specific role type and link kind.
     /// </summary>
-    private readonly Dictionary<XBRLItem, Relation[]> _relations;
+    private readonly Dictionary<XbrlItem, Relation[]> _relations;
 
     internal LinkTree(XBRLDiscoverableTaxonomySet dts, RoleType roleType, XBRLLink.LinkKind linkKind)
     {
@@ -29,13 +35,13 @@ public class LinkTree
         LinkKind = linkKind;
         var arcRelations = ResolveArcRelation();
 
-        var tmp = new Dictionary<XBRLItem, List<Relation>>();
+        var tmp = new Dictionary<XbrlItem, List<Relation>>();
         foreach (var relation in arcRelations)
         {
             tmp.TryAdd(relation.From, []);
             tmp[relation.From].Add(relation);
         }
-        _relations = new Dictionary<XBRLItem, Relation[]>();
+        _relations = new Dictionary<XbrlItem, Relation[]>();
         foreach (var relation in tmp)
         {
             _relations[relation.Key] = [.. relation.Value];
@@ -45,33 +51,34 @@ public class LinkTree
     }
 
     /// <summary>
-    /// DTS
+    /// Gets the discoverable taxonomy set (DTS) associated with this link tree.
     /// </summary>
     public XBRLDiscoverableTaxonomySet DTS { get; init; }
 
     /// <summary>
-    /// ロールタイプ
+    /// Gets the role type associated with this link tree.
     /// </summary>
     public RoleType RoleType { get; init; }
 
     /// <summary>
-    /// リンクの種類
+    /// Gets the kind of link (presentation, definition, calculation, etc.) for this tree.
     /// </summary>
     public XBRLLink.LinkKind LinkKind { get; init; }
 
     /// <summary>
-    /// ルートノード
+    /// Gets the root nodes of the link tree.
     /// </summary>
     public Node[] RootNodes { get; init; }
 
     private IEnumerable<Relation> ResolveArcRelation()
     {
-        var links = LinkKind == XBRLLink.LinkKind.presentationLink ? DTS.PresentationLinks :
+        var links = 
+            LinkKind == XBRLLink.LinkKind.presentationLink ? DTS.PresentationLinks :
             LinkKind == XBRLLink.LinkKind.definitionLink ? DTS.DefinitionLinks :
             LinkKind == XBRLLink.LinkKind.calculationLink ? DTS.CalculationLinks :
             LinkKind == XBRLLink.LinkKind.labelLink ? DTS.LabelLinks :
             LinkKind == XBRLLink.LinkKind.referenceLink ? DTS.ReferenceLinks :
-            LinkKind == XBRLLink.LinkKind.genericLink ? DTS.GenericLinks : 
+            LinkKind == XBRLLink.LinkKind.genericLink ? DTS.GenericLinks :
             throw new NotImplementedException();
 
         var relations = new List<Relation>();
@@ -82,10 +89,10 @@ public class LinkTree
         return relations;
     }
 
-    private IEnumerable<XBRLItem> GetRoots(IEnumerable<Relation> relations)
+    private IEnumerable<XbrlItem> GetRoots(IEnumerable<Relation> relations)
     {
-        var fromSet = new HashSet<XBRLItem>();
-        var toSet = new HashSet<XBRLItem>();
+        var fromSet = new HashSet<XbrlItem>();
+        var toSet = new HashSet<XbrlItem>();
         foreach (var r in relations)
         {
             fromSet.Add(r.From);
@@ -96,7 +103,7 @@ public class LinkTree
     }
 
     /// <summary>
-    /// ツリーの全ノードを深さ優先で列挙する
+    /// Enumerates all nodes in the link tree using depth-first traversal.
     /// </summary>
     /// <returns></returns>
     public IEnumerable<Node> EnumerateDepthFirst()
@@ -126,40 +133,56 @@ public class LinkTree
     }
 
     /// <summary>
-    /// ツリーのノード
+    /// Represents a node in the link tree.
     /// </summary>
     public class Node
     {
         /// <summary>
-        /// 属するツリー
+        /// Gets the link tree to which this node belongs.
         /// </summary>
         public LinkTree Tree { get; init; }
 
         /// <summary>
-        /// リソース（要素やラベル。ロケータは設定しない。）
+        /// Gets the resource (element, label, etc.) represented by this node.
         /// </summary>
-        public XBRLItem Resource { get; init; }
+        public XbrlItem Resource { get; init; }
 
         /// <summary>
-        /// 親ノード向けのエッジ
+        /// Gets the edge from the parent node to this node, if any.
         /// </summary>
         public Edge? EdgeFromParent { get; init; }
 
+        /// <summary>
+        /// Gets the order value associated with the arc from the parent edge, if available.
+        /// </summary>
+        /// <remarks>Returns null if there is no parent edge or if the arc does not have an order value
+        /// defined.</remarks>
         public double? Order => EdgeFromParent?.Arc.Order;
 
+        /// <summary>
+        /// Gets the preferred label associated with the edge from the parent, if available.
+        /// </summary>
         public string? PreferredLabel => EdgeFromParent?.Arc.PreferredLabel;
 
+        /// <summary>
+        /// Gets the arcrole associated with the current edge, if available.
+        /// </summary>
         public string? Arcrole => EdgeFromParent?.Arc.Arcrole;
 
+        /// <summary>
+        /// Gets the weight of the edge from the parent node, if available.
+        /// </summary>
+        /// <remarks>If the node does not have a parent or the edge does not specify a weight, this
+        /// property returns null.</remarks>
         public int? Weight => EdgeFromParent?.Arc.Weight;
 
         /// <summary>
-        /// 親ノードを取得する
+        /// Gets the parent node, or null if this is a root node.
         /// </summary>
         public Node? Parent => EdgeFromParent?.Parent;
 
         /// <summary>
-        /// ルートからの距離
+        /// Gets the distance from the root node (root is0).
         /// </summary>
         public int Distance
         {
@@ -171,16 +194,19 @@ public class LinkTree
         }
 
         /// <summary>
-        /// 子ノード向けのエッジ
+        /// Gets the edges from this node to its child nodes.
         /// </summary>
         private Edge[] EdgesToChildren { get; init; }
 
         /// <summary>
-        /// 子ノードを取得する
+        /// Gets an enumerable collection of child nodes, ordered by their associated arc order.
         /// </summary>
+        /// <remarks>The returned collection reflects the current set of child nodes and their order as
+        /// defined by the underlying edges. The enumeration is deferred and will reflect any changes to the underlying
+        /// data at the time of enumeration.</remarks>
         public IEnumerable<Node> Children => EdgesToChildren.OrderBy(e => e.Arc.Order).Select(e => e.Child);
 
-        internal Node(LinkTree tree, XBRLItem resource, Edge? fromParent)
+        internal Node(LinkTree tree, XbrlItem resource, Edge? fromParent)
         {
             Tree = tree;
             Resource = resource;
@@ -218,11 +244,11 @@ public class LinkTree
     }
 
     /// <summary>
-    /// ノードを結ぶ枝（エッジ）
+    /// Represents an edge (relationship) between two nodes in the link tree.
     /// </summary>
     public class Edge
     {
-        internal Edge(LinkTree tree, Node parent, XBRLItem childResource, Arc arc)
+        internal Edge(LinkTree tree, Node parent, XbrlItem childResource, Arc arc)
         {
             Tree = tree;
             Parent = parent;
@@ -231,22 +257,22 @@ public class LinkTree
         }
 
         /// <summary>
-        /// 属するツリー
+        /// Gets the link tree to which this edge belongs.
         /// </summary>
         public LinkTree Tree { get; init; }
 
         /// <summary>
-        /// 親ノード
+        /// Gets the parent node of this edge.
         /// </summary>
         public Node Parent { get; init; }
 
         /// <summary>
-        /// 子ノードとの関係を結ぶアーク。
+        /// Gets the arc (relationship) associated with this edge.
         /// </summary>
         public Arc Arc { get; init; }
 
         /// <summary>
-        /// 子ノード
+        /// Gets the child node of this edge.
         /// </summary>
         public Node Child { get; init; }
     }

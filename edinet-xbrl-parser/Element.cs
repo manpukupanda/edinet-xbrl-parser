@@ -3,112 +3,99 @@
 namespace Manpuku.Edinet.Xbrl;
 
 /// <summary>
-/// XBRL要素
+/// Represents an XBRL element definition discovered in a taxonomy.
 /// </summary>
-public class Element : XBRLItem
+public class Element : XbrlItem
 {
+    /// <summary>
+    /// Specifies the period type for an element (duration, instant, or undefined).
+    /// </summary>
     public enum PeriodKind
     {
         /// <summary>
-        /// 期間
+        /// Period (duration)
         /// </summary>
         Duration,
 
         /// <summary>
-        /// 時点
+        /// Instant (point in time)
         /// </summary>
         Instant,
 
         /// <summary>
-        /// 未定義
+        /// Undefined period kind
         /// </summary>
         Undefined,
     }
 
+    /// <summary>
+    /// Specifies the balance kind for an element (debit, credit, or undefined).
+    /// </summary>
     public enum BalanceKind
     {
         /// <summary>
-        /// 借方
+        /// Debit balance
         /// </summary>
         Debit,
 
         /// <summary>
-        /// 貸方
+        /// Credit balance
         /// </summary>
         Credit,
 
         /// <summary>
-        /// 未定義
+        /// Undefined balance kind
         /// </summary>
         Undefined,
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Element"/> class.
+    /// </summary>
+    /// <param name="dts">The discoverable taxonomy set this element belongs to.</param>
+    /// <param name="xml">The XML element representing this XBRL element.</param>
     public Element(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 
     /// <summary>
-    /// 名前空間
+    /// Gets the XNamespace of this element's name.
     /// </summary>
     public XNamespace TargetNamespace => Name.Namespace;
 
     /// <summary>
-    /// 要素名
+    /// Gets the qualified name of the element.
     /// </summary>
     public required XName Name { get; init; }
 
     /// <summary>
-    /// 抽象要素であるか
+    /// Gets a value indicating whether the element is abstract.
     /// </summary>
     public required bool Abstract { get; init; }
 
     /// <summary>
-    /// 期間種別
+    /// Gets the period type of the element (duration, instant, or undefined).
     /// </summary>
     public required PeriodKind PeriodType { get; init; }
 
     /// <summary>
-    /// null値許可要素であるか
+    /// Gets a value indicating whether the element allows nil values.
     /// </summary>
     public required bool Nillable { get; init; }
 
     /// <summary>
-    /// 代替グループ
+    /// Gets the substitution group (if any) for the element.
     /// </summary>
     public required XName? SubstitutionGroup { get; init; }
 
     /// <summary>
-    /// type
+    /// Gets the XBRL type (xsd type) of this element, if specified.
     /// </summary>
     public required XName? XBRLType { get; init; }
 
     /// <summary>
-    /// Balance
+    /// Gets the balance kind (debit/credit) of the element.
     /// </summary>
     public required BalanceKind Balance { get; init; }
-}
-
-/// <summary>
-/// タプル要素
-/// </summary>
-public class Tuple : Element
-{
-    public class Member : XBRLItem
-    {
-        public Member(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
-        {
-        }
-
-        public required int? MaxOccurs { get; init; }
-        public required int? MinOccurs { get; init; }
-        public required XName ElementRef { get; init; }
-        public Element Element => Dts.GetElement(ElementRef) ?? throw new InvalidDataException("Element not found.");
-    }
-
-    public Tuple(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
-    {
-    }
-
-    public required Member[] Sequence { get; init; }
 }
 

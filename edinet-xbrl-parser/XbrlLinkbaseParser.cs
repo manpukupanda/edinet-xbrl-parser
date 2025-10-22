@@ -25,34 +25,34 @@ internal class XbrlLinkbaseParser
     {
         Dts.PresentationLinks = [.. ParseLink(XBRLLink.LinkKind.presentationLink)];
         Dts.PresentationLinkTrees = ParseLinkTrees(XBRLLink.LinkKind.presentationLink, Dts.PresentationLinks);
-        _logger.LogInformation("PresentationLinks Parse OK.");
+        _logger.LogTrace("PresentationLinks Parse OK.");
 
         Dts.DefinitionLinks = [.. ParseLink(XBRLLink.LinkKind.definitionLink)];
         Dts.DefinitionLinkTrees = ParseLinkTrees(XBRLLink.LinkKind.definitionLink, Dts.DefinitionLinks);
-        _logger.LogInformation("DefinitionLinks Parse OK.");
+        _logger.LogTrace("DefinitionLinks Parse OK.");
 
         Dts.CalculationLinks = [.. ParseLink(XBRLLink.LinkKind.calculationLink)];
         Dts.CalculationLinkTrees = ParseLinkTrees(XBRLLink.LinkKind.calculationLink, Dts.CalculationLinks);
-        _logger.LogInformation("CalculationLinks Parse OK.");
+        _logger.LogTrace("CalculationLinks Parse OK.");
 
         Dts.LabelLinks = [.. ParseLink(XBRLLink.LinkKind.labelLink)];
         Dts.LabelLinkTrees = ParseLinkTrees(XBRLLink.LinkKind.labelLink, Dts.LabelLinks);
-        _logger.LogInformation("LabelLinks Parse OK.");
+        _logger.LogTrace("LabelLinks Parse OK.");
 
         Dts.ReferenceLinks = [.. ParseLink(XBRLLink.LinkKind.referenceLink)];
         Dts.ReferenceLinkTrees = ParseLinkTrees(XBRLLink.LinkKind.referenceLink, Dts.ReferenceLinks);
-        _logger.LogInformation("ReferenceLinks Parse OK.");
+        _logger.LogTrace("ReferenceLinks Parse OK.");
 
         Dts.GenericLinks = [.. ParseLink(XBRLLink.LinkKind.genericLink)];
         Dts.GenericLinkTrees = ParseLinkTrees(XBRLLink.LinkKind.genericLink, Dts.GenericLinks);
-        _logger.LogInformation("GenericLinks Parse OK.");
+        _logger.LogTrace("GenericLinks Parse OK.");
     }
 
     IEnumerable<XBRLLink> ParseLink(XBRLLink.LinkKind kind)
     {
         var result = new List<XBRLLink>();
 
-        foreach (var linkbaseNode in Dts.DocumentTree.Nodes.Where(n => n.NodeKind == XBRLDocumentTreeNode.DocumentKind.Linkbase))
+        foreach (var linkbaseNode in Dts.DocumentTree.Nodes.Where(n => n.NodeKind == DocumentTreeNode.DocumentKind.Linkbase))
         {
             var elements = linkbaseNode.Document.Descendants(XBRLLink.TagNameOf(kind));
             foreach (var element in elements)
@@ -96,7 +96,7 @@ internal class XbrlLinkbaseParser
         if (rt == null)
         {
             var (code, message) = XbrlErrorCatalog.RoleTypeNotFound(role);
-            throw new XbrlSyntaxException(code, message);
+            throw new XbrlSemanticException(code, message);
         }
 
         return rt;
@@ -128,7 +128,7 @@ internal class XbrlLinkbaseParser
         }
     }
 
-    XBRLItem GetResource(Uri uri, string href)
+    XbrlItem GetResource(Uri uri, string href)
     {
         var match = Regex.Match(href, @"^(.*)#(.*)$");
         if (match.Success)
@@ -146,18 +146,18 @@ internal class XbrlLinkbaseParser
             {
                 _uri = new Uri(uri, href);
             }
-            XBRLItem? e = Dts.GetElement(_uri) ?? (XBRLItem?)Dts.RoleTypes.FirstOrDefault(r => r.ReferenceUri.AbsoluteUri == _uri.AbsoluteUri);
+            XbrlItem? e = Dts.GetElement(_uri) ?? (XbrlItem?)Dts.RoleTypes.FirstOrDefault(r => r.ReferenceUri.AbsoluteUri == _uri.AbsoluteUri);
             if (e == null)
             {
                 var (code, message) = XbrlErrorCatalog.ElementNotFound(_uri.AbsoluteUri);
-                throw new XbrlSyntaxException(code, message);
+                throw new XbrlSemanticException(code, message);
             }
             return e;
         }
         else
         {
             var (code, message) = XbrlErrorCatalog.ElementNotFound(href);
-            throw new XbrlSyntaxException(code, message);
+            throw new XbrlSemanticException(code, message);
         }
     }
 

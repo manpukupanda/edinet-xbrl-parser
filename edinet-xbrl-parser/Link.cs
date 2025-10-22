@@ -3,54 +3,57 @@ using System.Xml.Linq;
 
 namespace Manpuku.Edinet.Xbrl;
 
-public class XBRLLink : XBRLItem
+/// <summary>
+/// Represents a link element in an XBRL linkbase (presentation, definition, calculation, label, reference, footnote, or generic links).
+/// </summary>
+public class XBRLLink : XbrlItem
 {
     /// <summary>
-    /// リンクの種類
+    /// Specifies the type of XBRL link.
     /// </summary>
     public enum LinkKind
     {
         /// <summary>
-        /// 表示リンク
+        /// Presentation link.
         /// </summary>
         presentationLink,
 
         /// <summary>
-        /// 定義リンク
+        /// Definition link.
         /// </summary>
         definitionLink,
 
         /// <summary>
-        /// 計算リンク
+        /// Calculation link.
         /// </summary>
         calculationLink,
 
         /// <summary>
-        /// 名称リンク
+        /// Label link.
         /// </summary>
         labelLink,
 
         /// <summary>
-        /// 参照リンク
+        /// Reference link.
         /// </summary>
         referenceLink,
 
         /// <summary>
-        /// 脚注リンク
+        /// Footnote link.
         /// </summary>
         footnoteLink,
 
         /// <summary>
-        /// ジェネリックリンク
+        /// Generic link.
         /// </summary>
         genericLink,
     }
 
     /// <summary>
-    /// 指定された種類のリンクのタグ名を取得する
+    /// Gets the tag name (XName) for the specified link kind.
     /// </summary>
-    /// <param name="kind"></param>
-    /// <returns></returns>
+    /// <param name="kind">The link kind.</param>
+    /// <returns>The corresponding XName for the link tag.</returns>
     public static XName TagNameOf(LinkKind kind)
     {
         if (kind == LinkKind.genericLink)
@@ -61,29 +64,43 @@ public class XBRLLink : XBRLItem
     }
 
     /// <summary>
-    /// リンクの種類
+    /// Gets the kind of link.
     /// </summary>
     public required LinkKind Kind { get; init; }
 
     /// <summary>
-    /// ロールタイプ
+    /// Gets the role type associated with this link.
     /// </summary>
     public required RoleType RoleType { get; init; }
 
     /// <summary>
-    /// アーク
+    /// Gets the arcs contained in this link.
     /// </summary>
     public required Arc[] Arcs { get; init; }
 
     /// <summary>
-    /// ロケータ
+    /// Gets the locators contained in this link.
     /// </summary>
     public required Locator[] Locators { get; init; }
 
+    /// <summary>
+    /// Gets the labels contained in this link (label resources).
+    /// </summary>
+    public required Label[] Labels { get; init; }
+
+    /// <summary>
+    /// Gets the reference resources contained in this link.
+    /// </summary>
+    public required Reference[] References { get; init; }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="XBRLLink"/> class.
+    /// </summary>
+    /// <param name="dts">The discoverable taxonomy set this link belongs to.</param>
+    /// <param name="xml">The XML element representing this link.</param>
     public XBRLLink(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
-
 
     ImmutableDictionary<string, ImmutableList<Locator>>? _cachedLocators;
 
@@ -102,6 +119,12 @@ public class XBRLLink : XBRLItem
         );
     }
 
+    /// <summary>
+    /// Retrieves all locators associated with the specified label.
+    /// </summary>
+    /// <param name="label">The label used to identify and retrieve the associated locators. Cannot be null.</param>
+    /// <returns>An enumerable collection of locators that are associated with the specified label. Returns an empty collection
+    /// if no locators are found for the label.</returns>
     public IEnumerable<Locator> GetLocatorsByLabel(string label)
     {
         if (_cachedLocators == null)
@@ -114,13 +137,11 @@ public class XBRLLink : XBRLItem
                 yield return loc;
     }
 
-    public required Label[] Labels { get; init; }
+    ImmutableDictionary<string, ImmutableList<XbrlItem>>? _cachedLabels;
 
-    ImmutableDictionary<string, ImmutableList<XBRLItem>>? _cachedLabels;
-
-    ImmutableDictionary<string, ImmutableList<XBRLItem>> ToCachedResources(IEnumerable<XBRLItem> resources)
+    ImmutableDictionary<string, ImmutableList<XbrlItem>> ToCachedResources(IEnumerable<XbrlItem> resources)
     {
-        var temp = new Dictionary<string, List<XBRLItem>>();
+        var temp = new Dictionary<string, List<XbrlItem>>();
 
         foreach (var resource in resources)
         {
@@ -137,9 +158,7 @@ public class XBRLLink : XBRLItem
         );
     }
 
-    public required Reference[] References { get; init; }
-
-    ImmutableDictionary<string, ImmutableList<XBRLItem>>? _cachedReferences;
+    ImmutableDictionary<string, ImmutableList<XbrlItem>>? _cachedReferences;
 
 
     internal IEnumerable<LinkTree.Relation> GetRelations()
@@ -156,7 +175,7 @@ public class XBRLLink : XBRLItem
         }
     }
 
-    IEnumerable<XBRLItem> ResolveResourcesByLabel(string label)
+    IEnumerable<XbrlItem> ResolveResourcesByLabel(string label)
     {
         foreach (var lab in GetResourcesByLabel(label))
         {
@@ -173,19 +192,19 @@ public class XBRLLink : XBRLItem
     }
 
     /// <summary>
-    /// リンクに含まれるリソースで、Label, Reference, Footnote, その他を取得する
-    /// 現在、Label, Referenceのみ対応
+    /// Gets resources included in the link with the specified label, such as Label, Reference, Footnote, and others.
+    /// Currently, it supports only Label and Reference.
     /// </summary>
-    IEnumerable<XBRLItem> GetResourcesByLabel(string label)
+    IEnumerable<XbrlItem> GetResourcesByLabel(string label)
     {
         if (Kind == LinkKind.labelLink || Kind == LinkKind.genericLink)
         {
             if (_cachedLabels == null)
             {
-                // 初回アクセス時にキャッシュを作成
+                // Create cache on first access
                 _cachedLabels = ToCachedResources(Labels);
             }
-            if (_cachedLabels.TryGetValue(label, out ImmutableList<XBRLItem>? value))
+            if (_cachedLabels.TryGetValue(label, out ImmutableList<XbrlItem>? value))
                 foreach (var l in value)
                     yield return l;
         }
@@ -193,10 +212,10 @@ public class XBRLLink : XBRLItem
         {
             if (_cachedReferences == null)
             {
-                // 初回アクセス時にキャッシュを作成
+                // Create cache on first access
                 _cachedReferences = ToCachedResources(References);
             }
-            if (_cachedReferences.TryGetValue(label, out ImmutableList<XBRLItem>? value))
+            if (_cachedReferences.TryGetValue(label, out ImmutableList<XbrlItem>? value))
                 foreach (var r in value)
                     yield return r;
         }

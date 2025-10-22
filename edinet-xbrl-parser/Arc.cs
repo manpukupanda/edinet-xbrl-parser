@@ -2,19 +2,23 @@
 
 namespace Manpuku.Edinet.Xbrl;
 
-public class Arc : XBRLItem
+/// <summary>
+/// Represents an XBRL arc (relationship) used in linkbases.
+/// </summary>
+public class Arc : XbrlItem
 {
+    /// <summary>
+    /// Use attribute enum.
+    /// </summary>
     public enum UseKind
     {
         /// <summary>
-        /// このアークが，DTS において，アークによって示される関係のネットワークに参加
-        /// してもよい一つの関係又は関係の集合を表すことを示す
+        /// Optional use: arc may participate in the relation network.
         /// </summary>
         optional,
 
         /// <summary>
-        /// このアークが，DTS において，アークによって示される関係のネットワークに，
-        /// それら自身及び他の対等関係を含めることを禁止する一つの関係又は関係の集合を表すことを示す。
+        /// Prohibited use: arc prohibits inclusion of the relation in the network.
         /// </summary>
         prohibited,
     }
@@ -24,42 +28,42 @@ public class Arc : XBRLItem
     }
 
     /// <summary>
-    /// from属性値
+    /// The 'from' label of the arc.
     /// </summary>
     public required string From { get; init; }
 
     /// <summary>
-    /// to属性値
+    /// The 'to' label of the arc.
     /// </summary>
     public required string To { get; init; }
 
     /// <summary>
-    /// use属性
+    /// The use attribute (optional/prohibited) of the arc.
     /// </summary>
     public required UseKind Use { get; init; }
 
     /// <summary>
-    /// priority属性
+    /// Priority value of the arc.
     /// </summary>
     public required int Priority { get; init; }
 
     /// <summary>
-    /// arcrole属性
+    /// The arcrole attribute (if any).
     /// </summary>
     public required string? Arcrole { get; init; }
 
     /// <summary>
-    /// order属性
+    /// Order value for sorting child nodes.
     /// </summary>
     public required double Order { get; init; }
 
     /// <summary>
-    /// weight属性
+    /// Weight value for the arc (if any).
     /// </summary>
     public required int? Weight { get; init; }
 
     /// <summary>
-    /// preferredLabel属性
+    /// Preferred label value associated with this arc (if any).
     /// </summary>
     public required string? PreferredLabel { get; init; }
 }

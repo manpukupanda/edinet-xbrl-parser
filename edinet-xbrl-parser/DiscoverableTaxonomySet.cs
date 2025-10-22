@@ -4,7 +4,7 @@ using System.Xml.Linq;
 namespace Manpuku.Edinet.Xbrl;
 
 /// <summary>
-/// Discoverable Taxonomy Set
+/// Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.
 /// </summary>
 public class XBRLDiscoverableTaxonomySet
 {
@@ -13,17 +13,12 @@ public class XBRLDiscoverableTaxonomySet
     private ConcurrentDictionary<XName, Element>? _elementsByName = null;
 
     /// <summary>
-    /// コンストラクタ
+    /// Gets or sets the document tree structure for all documents in the DTS.
     /// </summary>
-    internal XBRLDiscoverableTaxonomySet() { }
+    public required DocumentTree DocumentTree { get; init; }
 
     /// <summary>
-    /// ドキュメント構成のルートドキュメント
-    /// </summary>
-    public required XBRLDocumentTree DocumentTree { get; init; }
-
-    /// <summary>
-    /// 全要素
+    /// Gets all element definitions discovered in the DTS.
     /// </summary>
     public Element[] Elements
     {
@@ -44,74 +39,100 @@ public class XBRLDiscoverableTaxonomySet
     }
 
     /// <summary>
-    /// 全ロールタイプ
+    /// Gets all role types defined in the DTS.
     /// </summary>
     public RoleType[] RoleTypes { get; internal set; } = [];
 
     /// <summary>
-    /// 全コンテキスト
+    /// Gets all contexts defined in the DTS.
     /// </summary>
     public Context[] Contexts { get; internal set; } = [];
 
     /// <summary>
-    /// 全ユニット
+    /// Gets all units defined in the DTS.
     /// </summary>
     public Unit[] Units { get; internal set; } = [];
 
     /// <summary>
-    /// 全ファクト
+    /// Gets all facts (data points) defined in the DTS.
     /// </summary>
     public Fact[] Facts { get; internal set; } = [];
 
     /// <summary>
-    /// 全表示リンク
+    /// Gets all presentation links in the DTS.
     /// </summary>
     public XBRLLink[] PresentationLinks { get; internal set; } = [];
+
+    /// <summary>
+    /// Gets the presentation link trees, grouped by role type.
+    /// </summary>
     public Dictionary<RoleType, LinkTree> PresentationLinkTrees { get; internal set; } = [];
 
     /// <summary>
-    /// 全定義リンク
+    /// Gets all definition links in the DTS.
     /// </summary>
     public XBRLLink[] DefinitionLinks { get; internal set; } = [];
+
+    /// <summary>
+    /// Gets the definition link trees, grouped by role type.
+    /// </summary>
     public Dictionary<RoleType, LinkTree> DefinitionLinkTrees { get; internal set; } = [];
 
     /// <summary>
-    /// 計算リンク
+    /// Gets all calculation links in the DTS.
     /// </summary>
     public XBRLLink[] CalculationLinks { get; internal set; } = [];
+
+    /// <summary>
+    /// Gets the calculation link trees, grouped by role type.
+    /// </summary>
     public Dictionary<RoleType, LinkTree> CalculationLinkTrees { get; internal set; } = [];
 
     /// <summary>
-    /// ラベルリンク
+    /// Gets all label links in the DTS.
     /// </summary>
     public XBRLLink[] LabelLinks { get; internal set; } = [];
+
+    /// <summary>
+    /// Gets the label link trees, grouped by role type.
+    /// </summary>
     public Dictionary<RoleType, LinkTree> LabelLinkTrees { get; internal set; } = [];
 
     /// <summary>
-    /// 参照リンク
+    /// Gets all reference links in the DTS.
     /// </summary>
     public XBRLLink[] ReferenceLinks { get; internal set; } = [];
+
+    /// <summary>
+    /// Gets the reference link trees, grouped by role type.
+    /// </summary>
     public Dictionary<RoleType, LinkTree> ReferenceLinkTrees { get; internal set; } = [];
 
     /// <summary>
-    /// ラベルリンク
+    /// Gets all generic links in the DTS.
     /// </summary>
     public XBRLLink[] GenericLinks { get; internal set; } = [];
+
+    /// <summary>
+    /// Gets the generic link trees, grouped by role type.
+    /// </summary>
     public Dictionary<RoleType, LinkTree> GenericLinkTrees { get; internal set; } = [];
 
     /// <summary>
-    /// 全ラベル
+    /// Gets all labels associated with elements in the DTS.
     /// </summary>
     public Dictionary<Element, Label[]> Labels { get; internal set; } = [];
 
     /// <summary>
-    /// 全リファレンス
+    /// Gets all references associated with elements in the DTS.
     /// </summary>
     public Dictionary<Element, Reference[]> References { get; internal set; } = [];
 
     /// <summary>
-    /// 要素を取得する
+    /// Retrieves the element associated with the specified URI, if it exists.
     /// </summary>
+    /// <param name="href">The URI used to locate the corresponding element. The method uses the absolute form of the URI for lookup.</param>
+    /// <returns>The element associated with the specified URI, or null if no such element exists.</returns>
     internal Element? GetElement(Uri href)
     {
         if (_elementsByHref == null) return null;
@@ -124,10 +145,10 @@ public class XBRLDiscoverableTaxonomySet
     }
 
     /// <summary>
-    /// 要素を取得する
+    /// Retrieves the element associated with the specified XML name, if it exists.
     /// </summary>
-    /// <param name="name"></param>
-    /// <returns></returns>
+    /// <param name="name">The XML qualified name of the element to retrieve.</param>
+    /// <returns>The element associated with the specified name, or null if no such element exists.</returns>
     internal Element? GetElement(XName name)
     {
         if (_elementsByName == null) return null;
@@ -140,10 +161,11 @@ public class XBRLDiscoverableTaxonomySet
     }
 
     /// <summary>
-    /// ドキュメントからURIを取得する
+    /// Retrieves the URI associated with the specified XML document, if one exists.
     /// </summary>
-    /// <param name="document"></param>
-    /// <returns></returns>
+    /// <param name="document">The XML document for which to retrieve the associated URI.</param>
+    /// <returns>A <see cref="Uri"/> representing the URI associated with the specified document, or <see langword="null"/> if no
+    /// association is found.</returns>
     internal Uri? GetUriFor(XDocument document)
     {
         foreach (var node in DocumentTree.Nodes)
@@ -157,11 +179,14 @@ public class XBRLDiscoverableTaxonomySet
     }
 
     /// <summary>
-    /// 特定の種類のドキュメントを返す
+    /// Returns a collection of unique XBRL documents of the specified kind from the document tree.
     /// </summary>
-    /// <param name="documentType"></param>
-    /// <returns></returns>
-    internal IEnumerable<XDocument> GetDocuments(XBRLDocumentTreeNode.DocumentKind documentType)
+    /// <remarks>Each document is included only once in the result, even if multiple nodes reference the same
+    /// document URI. Documents with a null value are excluded.</remarks>
+    /// <param name="documentType">The type of document to retrieve. Only documents matching this kind are included in the result.</param>
+    /// <returns>An enumerable collection of XDocument instances representing the unique documents of the specified kind. The
+    /// collection is empty if no matching documents are found.</returns>
+    internal IEnumerable<XDocument> GetDocuments(DocumentTreeNode.DocumentKind documentType)
     {
         var seen = new HashSet<Uri>();
 
@@ -174,4 +199,3 @@ public class XBRLDiscoverableTaxonomySet
         }
     }
 }
-
