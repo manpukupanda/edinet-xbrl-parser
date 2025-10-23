@@ -58,3 +58,8 @@ $RECYCLE.BIN/
 *.sln.iml
 
 TestResults/
+
+# DocFX build output
+_site/
+api/
+.cache/
