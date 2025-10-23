@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Manpuku.Edinet.Xbrl | edinet-xbrl-parser </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Manpuku.Edinet.Xbrl | edinet-xbrl-parser ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="edinet-xbrl-parser">
+            edinet-xbrl-parser
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Manpuku.Edinet.Xbrl">
+
+  <h1 id="Manpuku_Edinet_Xbrl" data-uid="Manpuku.Edinet.Xbrl" class="text-break">Namespace Manpuku.Edinet.Xbrl</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Arc.html">Arc</a></dt>
+      <dd><p>Represents an XBRL arc (relationship) used in linkbases.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Context.html">Context</a></dt>
+      <dd><p>Represents an XBRL context, which defines the reporting period, instant, and scenario information for a specific
+XBRL fact.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Context.ExplicitMember.html">Context.ExplicitMember</a></dt>
+      <dd><p>Represents an explicit member with a specified dimension and member element.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.DocumentTree.html">DocumentTree</a></dt>
+      <dd><p>Represents a tree of related XBRL documents.
+Holds the root node and provides DFS enumeration of all nodes in the tree.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.DocumentTreeNode.html">DocumentTreeNode</a></dt>
+      <dd><p>Represents a node in the document tree. A node corresponds to a loaded XML document and keeps
+references to related documents (schema refs, imports, linkbase refs, locs) as child nodes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.html">Element</a></dt>
+      <dd><p>Represents an XBRL element definition discovered in a taxonomy.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Fact.html">Fact</a></dt>
+      <dd><p>Represents a single XBRL fact value (numeric or non-numeric) associated with an element.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Label.html">Label</a></dt>
+      <dd><p>Represents a label resource used in XBRL linkbases (label link or generic link).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.html">LinkTree</a></dt>
+      <dd><p>Represents a tree structure of XBRL linkbase relationships for a specific role type and link kind.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.Edge.html">LinkTree.Edge</a></dt>
+      <dd><p>Represents an edge (relationship) between two nodes in the link tree.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.Node.html">LinkTree.Node</a></dt>
+      <dd><p>Represents a node in the link tree.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Locator.html">Locator</a></dt>
+      <dd><p>Represents a locator element in an XBRL linkbase, which points to a resource in a taxonomy or instance.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Reference.html">Reference</a></dt>
+      <dd><p>Represents a reference resource contained in a reference link.
+Each reference contains a sequence of name/value pairs describing the reference.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a></dt>
+      <dd><p>Represents a roleType resource (definition of a link role) in an XBRL taxonomy.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Tuple.html">Tuple</a></dt>
+      <dd><p>Represents a tuple element that contains a sequence of member element references.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Tuple.Member.html">Tuple.Member</a></dt>
+      <dd><p>Represents a member of a tuple, referencing another element.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.TupleFact.html">TupleFact</a></dt>
+      <dd><p>Represents a tuple fact that contains nested member facts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Unit.html">Unit</a></dt>
+      <dd><p>Represents a unit definition in an XBRL instance or taxonomy.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a></dt>
+      <dd><p>Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.html">XBRLLink</a></dt>
+      <dd><p>Represents a link element in an XBRL linkbase (presentation, definition, calculation, label, reference, footnote, or generic links).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html">XbrlItem</a></dt>
+      <dd><p>Base class for items found in XBRL taxonomies and instances (elements, labels, arcs, etc.).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlNamespaces.html">XbrlNamespaces</a></dt>
+      <dd><p>Provides XNamespace and XName constants for XBRL, XML Schema, XLink, and related namespaces used in XBRL processing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParseException.html">XbrlParseException</a></dt>
+      <dd><p>Represents an exception that occurs during XBRL parsing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html">XbrlParser</a></dt>
+      <dd><p>Top-level XBRL parser coordinating DTS loading and parsing of schema, instance and linkbase documents.
+Use <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_ParseAsync_System_Uri_System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___">ParseAsync(Uri, Func&lt;Uri, Task&lt;XDocument&gt;&gt;)</a> to parse an entry point and produce a
+<a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlSemanticException.html">XbrlSemanticException</a></dt>
+      <dd><p>Represents an exception that occurs due to XBRL semantic errors during parsing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlSyntaxException.html">XbrlSyntaxException</a></dt>
+      <dd><p>Represents an exception that occurs due to XBRL syntax errors during parsing.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.IXbrlParser.html">IXbrlParser</a></dt>
+      <dd><p>Interface for an XBRL parser.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Arc.UseKind.html">Arc.UseKind</a></dt>
+      <dd><p>Use attribute enum.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.DocumentTreeNode.DocumentKind.html">DocumentTreeNode.DocumentKind</a></dt>
+      <dd><p>Kind of document represented by the node.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.BalanceKind.html">Element.BalanceKind</a></dt>
+      <dd><p>Specifies the balance kind for an element (debit, credit, or undefined).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.PeriodKind.html">Element.PeriodKind</a></dt>
+      <dd><p>Specifies the period type for an element (duration, instant, or undefined).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.LinkKind.html">XBRLLink.LinkKind</a></dt>
+      <dd><p>Specifies the type of XBRL link.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
