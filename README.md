@@ -98,4 +98,5 @@ MIT License
 
 ## Links
 - [GitHub Repository](https://github.com/manpukupanda/edinet-xbrl-parser)
+- [API Reference](https://manpukupanda.github.io/edinet-xbrl-parser/index.html)
 - [NuGet Gallery](https://www.nuget.org/packages/Manpuku.Edinet.Xbrl)
