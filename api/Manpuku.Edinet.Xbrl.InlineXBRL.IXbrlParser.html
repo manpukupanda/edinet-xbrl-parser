@@ -121,10 +121,10 @@ Interface IXbrlParser  <a class="header-action link-secondary" title="View sourc
 </h2>
 
 
-  <a id="Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInline_" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline*"></a>
+  <a id="Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInlineAsync_" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync*"></a>
 
-  <h3 id="Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInline_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})">
-  ParseInline(Uri[], Func&lt;Uri, Task&lt;XDocument&gt;&gt;)
+  <h3 id="Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInlineAsync_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})">
+  ParseInlineAsync(Uri[], Func&lt;Uri, Task&lt;XDocument&gt;&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/InlineXBRL/IXbrlParser.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -133,7 +133,7 @@ Interface IXbrlParser  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseInline(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;DiscoverableTaxonomySet&gt; ParseInlineAsync(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -148,8 +148,8 @@ Interface IXbrlParser  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>&gt;</dt>
-    <dd><p>The populated <a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
+    <dd><p>The populated <a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>.</p>
 </dd>
   </dl>
 

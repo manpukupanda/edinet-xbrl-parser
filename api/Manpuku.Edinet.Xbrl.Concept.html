@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Concept | edinet-xbrl-parser </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Concept | edinet-xbrl-parser ">
+      
+      <meta name="description" content="Represents an XBRL concept definition discovered in a taxonomy.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/manpukupanda/edinet-xbrl-parser/new/main/apiSpec/new?filename=Manpuku_Edinet_Xbrl_Concept.md&amp;value=---%0Auid%3A%20Manpuku.Edinet.Xbrl.Concept%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="edinet-xbrl-parser">
+            edinet-xbrl-parser
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Manpuku.Edinet.Xbrl.Concept">
+
+
+
+  <h1 id="Manpuku_Edinet_Xbrl_Concept" data-uid="Manpuku.Edinet.Xbrl.Concept" class="text-break">
+Class Concept  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Manpuku.html">Manpuku</a>.<a class="xref" href="Manpuku.Edinet.html">Edinet</a>.<a class="xref" href="Manpuku.Edinet.Xbrl.html">Xbrl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Manpuku.Edinet.Xbrl.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an XBRL concept definition discovered in a taxonomy.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Concept : XbrlItem</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html">XbrlItem</a></div>
+      <div><span class="xref">Concept</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Manpuku.Edinet.Xbrl.Tuple.html">Tuple</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem_Dts">XbrlItem.Dts</a>
+    </div>
+    <div>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem_URI">XbrlItem.URI</a>
+    </div>
+    <div>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem_Xml">XbrlItem.Xml</a>
+    </div>
+    <div>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem_Id">XbrlItem.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept__ctor_" data-uid="Manpuku.Edinet.Xbrl.Concept.#ctor*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_" data-uid="Manpuku.Edinet.Xbrl.Concept.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)">
+  Concept(DiscoverableTaxonomySet, XElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Concept(DiscoverableTaxonomySet dts, XElement xml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dts</code> <a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a></dt>
+    <dd><p>The discoverable taxonomy set this concept belongs to.</p>
+</dd>
+    <dt><code>xml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xelement">XElement</a></dt>
+    <dd><p>The XML element representing this XBRL concept.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_Abstract_" data-uid="Manpuku.Edinet.Xbrl.Concept.Abstract*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_Abstract" data-uid="Manpuku.Edinet.Xbrl.Concept.Abstract">
+  Abstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the concept is abstract.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required bool Abstract { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_Balance_" data-uid="Manpuku.Edinet.Xbrl.Concept.Balance*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_Balance" data-uid="Manpuku.Edinet.Xbrl.Concept.Balance">
+  Balance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the balance kind (debit/credit) of the concept.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required Concept.BalanceKind Balance { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a>.<a class="xref" href="Manpuku.Edinet.Xbrl.Concept.BalanceKind.html">BalanceKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_Name_" data-uid="Manpuku.Edinet.Xbrl.Concept.Name*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_Name" data-uid="Manpuku.Edinet.Xbrl.Concept.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the qualified name of the concept.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required XName Name { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_Nillable_" data-uid="Manpuku.Edinet.Xbrl.Concept.Nillable*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_Nillable" data-uid="Manpuku.Edinet.Xbrl.Concept.Nillable">
+  Nillable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the concept allows nil values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required bool Nillable { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_PeriodType_" data-uid="Manpuku.Edinet.Xbrl.Concept.PeriodType*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_PeriodType" data-uid="Manpuku.Edinet.Xbrl.Concept.PeriodType">
+  PeriodType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the period type of the concept (duration, instant, or undefined).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required Concept.PeriodKind PeriodType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a>.<a class="xref" href="Manpuku.Edinet.Xbrl.Concept.PeriodKind.html">PeriodKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_SubstitutionGroup_" data-uid="Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_SubstitutionGroup" data-uid="Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup">
+  SubstitutionGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the substitution group (if any) for the concept.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required XName? SubstitutionGroup { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_TargetNamespace_" data-uid="Manpuku.Edinet.Xbrl.Concept.TargetNamespace*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_TargetNamespace" data-uid="Manpuku.Edinet.Xbrl.Concept.TargetNamespace">
+  TargetNamespace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the XNamespace of this concept's name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XNamespace TargetNamespace { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xnamespace">XNamespace</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_Concept_XBRLType_" data-uid="Manpuku.Edinet.Xbrl.Concept.XBRLType*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_Concept_XBRLType" data-uid="Manpuku.Edinet.Xbrl.Concept.XBRLType">
+  XBRLType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the XBRL type (xsd type) of this concept, if specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required XName? XBRLType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

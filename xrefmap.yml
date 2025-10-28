@@ -135,6 +135,183 @@ references:
   isSpec: "True"
   fullName: Manpuku.Edinet.Xbrl.Arc.Weight
   nameWithType: Arc.Weight
+- uid: Manpuku.Edinet.Xbrl.Concept
+  name: Concept
+  href: api/Manpuku.Edinet.Xbrl.Concept.html
+  commentId: T:Manpuku.Edinet.Xbrl.Concept
+  fullName: Manpuku.Edinet.Xbrl.Concept
+  nameWithType: Concept
+- uid: Manpuku.Edinet.Xbrl.Concept.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Concept(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Concept.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Concept.Concept(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Concept.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Concept.Concept(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Concept.New(DiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Concept.#ctor*
+  name: Concept
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept__ctor_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Manpuku.Edinet.Xbrl.Concept.Concept
+  fullName.vb: Manpuku.Edinet.Xbrl.Concept.New
+  nameWithType: Concept.Concept
+  nameWithType.vb: Concept.New
+- uid: Manpuku.Edinet.Xbrl.Concept.Abstract
+  name: Abstract
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Abstract
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.Abstract
+  fullName: Manpuku.Edinet.Xbrl.Concept.Abstract
+  nameWithType: Concept.Abstract
+- uid: Manpuku.Edinet.Xbrl.Concept.Abstract*
+  name: Abstract
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Abstract_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.Abstract
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.Abstract
+  nameWithType: Concept.Abstract
+- uid: Manpuku.Edinet.Xbrl.Concept.Balance
+  name: Balance
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Balance
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.Balance
+  fullName: Manpuku.Edinet.Xbrl.Concept.Balance
+  nameWithType: Concept.Balance
+- uid: Manpuku.Edinet.Xbrl.Concept.Balance*
+  name: Balance
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Balance_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.Balance
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.Balance
+  nameWithType: Concept.Balance
+- uid: Manpuku.Edinet.Xbrl.Concept.BalanceKind
+  name: Concept.BalanceKind
+  href: api/Manpuku.Edinet.Xbrl.Concept.BalanceKind.html
+  commentId: T:Manpuku.Edinet.Xbrl.Concept.BalanceKind
+  fullName: Manpuku.Edinet.Xbrl.Concept.BalanceKind
+  nameWithType: Concept.BalanceKind
+- uid: Manpuku.Edinet.Xbrl.Concept.BalanceKind.Credit
+  name: Credit
+  href: api/Manpuku.Edinet.Xbrl.Concept.BalanceKind.html#Manpuku_Edinet_Xbrl_Concept_BalanceKind_Credit
+  commentId: F:Manpuku.Edinet.Xbrl.Concept.BalanceKind.Credit
+  fullName: Manpuku.Edinet.Xbrl.Concept.BalanceKind.Credit
+  nameWithType: Concept.BalanceKind.Credit
+- uid: Manpuku.Edinet.Xbrl.Concept.BalanceKind.Debit
+  name: Debit
+  href: api/Manpuku.Edinet.Xbrl.Concept.BalanceKind.html#Manpuku_Edinet_Xbrl_Concept_BalanceKind_Debit
+  commentId: F:Manpuku.Edinet.Xbrl.Concept.BalanceKind.Debit
+  fullName: Manpuku.Edinet.Xbrl.Concept.BalanceKind.Debit
+  nameWithType: Concept.BalanceKind.Debit
+- uid: Manpuku.Edinet.Xbrl.Concept.BalanceKind.Undefined
+  name: Undefined
+  href: api/Manpuku.Edinet.Xbrl.Concept.BalanceKind.html#Manpuku_Edinet_Xbrl_Concept_BalanceKind_Undefined
+  commentId: F:Manpuku.Edinet.Xbrl.Concept.BalanceKind.Undefined
+  fullName: Manpuku.Edinet.Xbrl.Concept.BalanceKind.Undefined
+  nameWithType: Concept.BalanceKind.Undefined
+- uid: Manpuku.Edinet.Xbrl.Concept.Name
+  name: Name
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Name
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.Name
+  fullName: Manpuku.Edinet.Xbrl.Concept.Name
+  nameWithType: Concept.Name
+- uid: Manpuku.Edinet.Xbrl.Concept.Name*
+  name: Name
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Name_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.Name
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.Name
+  nameWithType: Concept.Name
+- uid: Manpuku.Edinet.Xbrl.Concept.Nillable
+  name: Nillable
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Nillable
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.Nillable
+  fullName: Manpuku.Edinet.Xbrl.Concept.Nillable
+  nameWithType: Concept.Nillable
+- uid: Manpuku.Edinet.Xbrl.Concept.Nillable*
+  name: Nillable
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Nillable_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.Nillable
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.Nillable
+  nameWithType: Concept.Nillable
+- uid: Manpuku.Edinet.Xbrl.Concept.PeriodKind
+  name: Concept.PeriodKind
+  href: api/Manpuku.Edinet.Xbrl.Concept.PeriodKind.html
+  commentId: T:Manpuku.Edinet.Xbrl.Concept.PeriodKind
+  fullName: Manpuku.Edinet.Xbrl.Concept.PeriodKind
+  nameWithType: Concept.PeriodKind
+- uid: Manpuku.Edinet.Xbrl.Concept.PeriodKind.Duration
+  name: Duration
+  href: api/Manpuku.Edinet.Xbrl.Concept.PeriodKind.html#Manpuku_Edinet_Xbrl_Concept_PeriodKind_Duration
+  commentId: F:Manpuku.Edinet.Xbrl.Concept.PeriodKind.Duration
+  fullName: Manpuku.Edinet.Xbrl.Concept.PeriodKind.Duration
+  nameWithType: Concept.PeriodKind.Duration
+- uid: Manpuku.Edinet.Xbrl.Concept.PeriodKind.Instant
+  name: Instant
+  href: api/Manpuku.Edinet.Xbrl.Concept.PeriodKind.html#Manpuku_Edinet_Xbrl_Concept_PeriodKind_Instant
+  commentId: F:Manpuku.Edinet.Xbrl.Concept.PeriodKind.Instant
+  fullName: Manpuku.Edinet.Xbrl.Concept.PeriodKind.Instant
+  nameWithType: Concept.PeriodKind.Instant
+- uid: Manpuku.Edinet.Xbrl.Concept.PeriodKind.Undefined
+  name: Undefined
+  href: api/Manpuku.Edinet.Xbrl.Concept.PeriodKind.html#Manpuku_Edinet_Xbrl_Concept_PeriodKind_Undefined
+  commentId: F:Manpuku.Edinet.Xbrl.Concept.PeriodKind.Undefined
+  fullName: Manpuku.Edinet.Xbrl.Concept.PeriodKind.Undefined
+  nameWithType: Concept.PeriodKind.Undefined
+- uid: Manpuku.Edinet.Xbrl.Concept.PeriodType
+  name: PeriodType
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_PeriodType
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.PeriodType
+  fullName: Manpuku.Edinet.Xbrl.Concept.PeriodType
+  nameWithType: Concept.PeriodType
+- uid: Manpuku.Edinet.Xbrl.Concept.PeriodType*
+  name: PeriodType
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_PeriodType_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.PeriodType
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.PeriodType
+  nameWithType: Concept.PeriodType
+- uid: Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup
+  name: SubstitutionGroup
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_SubstitutionGroup
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup
+  fullName: Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup
+  nameWithType: Concept.SubstitutionGroup
+- uid: Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup*
+  name: SubstitutionGroup
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_SubstitutionGroup_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.SubstitutionGroup
+  nameWithType: Concept.SubstitutionGroup
+- uid: Manpuku.Edinet.Xbrl.Concept.TargetNamespace
+  name: TargetNamespace
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_TargetNamespace
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.TargetNamespace
+  fullName: Manpuku.Edinet.Xbrl.Concept.TargetNamespace
+  nameWithType: Concept.TargetNamespace
+- uid: Manpuku.Edinet.Xbrl.Concept.TargetNamespace*
+  name: TargetNamespace
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_TargetNamespace_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.TargetNamespace
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.TargetNamespace
+  nameWithType: Concept.TargetNamespace
+- uid: Manpuku.Edinet.Xbrl.Concept.XBRLType
+  name: XBRLType
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_XBRLType
+  commentId: P:Manpuku.Edinet.Xbrl.Concept.XBRLType
+  fullName: Manpuku.Edinet.Xbrl.Concept.XBRLType
+  nameWithType: Concept.XBRLType
+- uid: Manpuku.Edinet.Xbrl.Concept.XBRLType*
+  name: XBRLType
+  href: api/Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_XBRLType_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Concept.XBRLType
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Concept.XBRLType
+  nameWithType: Concept.XBRLType
 - uid: Manpuku.Edinet.Xbrl.Context
   name: Context
   href: api/Manpuku.Edinet.Xbrl.Context.html
@@ -225,6 +402,272 @@ references:
   isSpec: "True"
   fullName: Manpuku.Edinet.Xbrl.Context.StartDate
   nameWithType: Context.StartDate
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet
+  name: DiscoverableTaxonomySet
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html
+  commentId: T:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet
+  nameWithType: DiscoverableTaxonomySet
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees
+  name: CalculationLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinkTrees
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees
+  nameWithType: DiscoverableTaxonomySet.CalculationLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees*
+  name: CalculationLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinkTrees_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees
+  nameWithType: DiscoverableTaxonomySet.CalculationLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks
+  name: CalculationLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinks
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks
+  nameWithType: DiscoverableTaxonomySet.CalculationLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks*
+  name: CalculationLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinks_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks
+  nameWithType: DiscoverableTaxonomySet.CalculationLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts
+  name: Concepts
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Concepts
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts
+  nameWithType: DiscoverableTaxonomySet.Concepts
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts*
+  name: Concepts
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Concepts_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts
+  nameWithType: DiscoverableTaxonomySet.Concepts
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts
+  name: Contexts
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Contexts
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts
+  nameWithType: DiscoverableTaxonomySet.Contexts
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts*
+  name: Contexts
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Contexts_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts
+  nameWithType: DiscoverableTaxonomySet.Contexts
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees
+  name: DefinitionLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinkTrees
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees
+  nameWithType: DiscoverableTaxonomySet.DefinitionLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees*
+  name: DefinitionLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinkTrees_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees
+  nameWithType: DiscoverableTaxonomySet.DefinitionLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks
+  name: DefinitionLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinks
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks
+  nameWithType: DiscoverableTaxonomySet.DefinitionLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks*
+  name: DefinitionLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinks_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks
+  nameWithType: DiscoverableTaxonomySet.DefinitionLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree
+  name: DocumentTree
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DocumentTree
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree
+  nameWithType: DiscoverableTaxonomySet.DocumentTree
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree*
+  name: DocumentTree
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DocumentTree_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree
+  nameWithType: DiscoverableTaxonomySet.DocumentTree
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts
+  name: Facts
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Facts
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts
+  nameWithType: DiscoverableTaxonomySet.Facts
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts*
+  name: Facts
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Facts_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts
+  nameWithType: DiscoverableTaxonomySet.Facts
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees
+  name: GenericLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinkTrees
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees
+  nameWithType: DiscoverableTaxonomySet.GenericLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees*
+  name: GenericLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinkTrees_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees
+  nameWithType: DiscoverableTaxonomySet.GenericLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks
+  name: GenericLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinks
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks
+  nameWithType: DiscoverableTaxonomySet.GenericLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks*
+  name: GenericLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinks_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks
+  nameWithType: DiscoverableTaxonomySet.GenericLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees
+  name: LabelLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinkTrees
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees
+  nameWithType: DiscoverableTaxonomySet.LabelLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees*
+  name: LabelLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinkTrees_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees
+  nameWithType: DiscoverableTaxonomySet.LabelLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks
+  name: LabelLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinks
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks
+  nameWithType: DiscoverableTaxonomySet.LabelLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks*
+  name: LabelLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinks_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks
+  nameWithType: DiscoverableTaxonomySet.LabelLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels
+  name: Labels
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Labels
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels
+  nameWithType: DiscoverableTaxonomySet.Labels
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels*
+  name: Labels
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Labels_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels
+  nameWithType: DiscoverableTaxonomySet.Labels
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees
+  name: PresentationLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinkTrees
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees
+  nameWithType: DiscoverableTaxonomySet.PresentationLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees*
+  name: PresentationLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinkTrees_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees
+  nameWithType: DiscoverableTaxonomySet.PresentationLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks
+  name: PresentationLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinks
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks
+  nameWithType: DiscoverableTaxonomySet.PresentationLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks*
+  name: PresentationLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinks_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks
+  nameWithType: DiscoverableTaxonomySet.PresentationLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees
+  name: ReferenceLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinkTrees
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees
+  nameWithType: DiscoverableTaxonomySet.ReferenceLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees*
+  name: ReferenceLinkTrees
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinkTrees_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees
+  nameWithType: DiscoverableTaxonomySet.ReferenceLinkTrees
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks
+  name: ReferenceLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinks
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks
+  nameWithType: DiscoverableTaxonomySet.ReferenceLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks*
+  name: ReferenceLinks
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinks_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks
+  nameWithType: DiscoverableTaxonomySet.ReferenceLinks
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References
+  name: References
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_References
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References
+  nameWithType: DiscoverableTaxonomySet.References
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References*
+  name: References
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_References_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References
+  nameWithType: DiscoverableTaxonomySet.References
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes
+  name: RoleTypes
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_RoleTypes
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes
+  nameWithType: DiscoverableTaxonomySet.RoleTypes
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes*
+  name: RoleTypes
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_RoleTypes_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes
+  nameWithType: DiscoverableTaxonomySet.RoleTypes
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units
+  name: Units
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Units
+  commentId: P:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units
+  nameWithType: DiscoverableTaxonomySet.Units
+- uid: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units*
+  name: Units
+  href: api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Units_
+  commentId: Overload:Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units
+  nameWithType: DiscoverableTaxonomySet.Units
 - uid: Manpuku.Edinet.Xbrl.DocumentTree
   name: DocumentTree
   href: api/Manpuku.Edinet.Xbrl.DocumentTree.html
@@ -619,15 +1062,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.Fact
   fullName: Manpuku.Edinet.Xbrl.Fact
   nameWithType: Fact
-- uid: Manpuku.Edinet.Xbrl.Fact.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: Fact(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.Fact.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.Fact.Fact(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.Fact.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: Fact.Fact(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: Fact.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Fact.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Fact(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Fact.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Fact.Fact(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Fact.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Fact.Fact(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Fact.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.Fact.#ctor*
   name: Fact
   href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact__ctor_
@@ -638,6 +1081,19 @@ references:
   fullName.vb: Manpuku.Edinet.Xbrl.Fact.New
   nameWithType: Fact.Fact
   nameWithType.vb: Fact.New
+- uid: Manpuku.Edinet.Xbrl.Fact.Concept
+  name: Concept
+  href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact_Concept
+  commentId: P:Manpuku.Edinet.Xbrl.Fact.Concept
+  fullName: Manpuku.Edinet.Xbrl.Fact.Concept
+  nameWithType: Fact.Concept
+- uid: Manpuku.Edinet.Xbrl.Fact.Concept*
+  name: Concept
+  href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact_Concept_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Fact.Concept
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.Fact.Concept
+  nameWithType: Fact.Concept
 - uid: Manpuku.Edinet.Xbrl.Fact.Context
   name: Context
   href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact_Context
@@ -664,19 +1120,6 @@ references:
   isSpec: "True"
   fullName: Manpuku.Edinet.Xbrl.Fact.Decimals
   nameWithType: Fact.Decimals
-- uid: Manpuku.Edinet.Xbrl.Fact.Element
-  name: Element
-  href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact_Element
-  commentId: P:Manpuku.Edinet.Xbrl.Fact.Element
-  fullName: Manpuku.Edinet.Xbrl.Fact.Element
-  nameWithType: Fact.Element
-- uid: Manpuku.Edinet.Xbrl.Fact.Element*
-  name: Element
-  href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact_Element_
-  commentId: Overload:Manpuku.Edinet.Xbrl.Fact.Element
-  isSpec: "True"
-  fullName: Manpuku.Edinet.Xbrl.Fact.Element
-  nameWithType: Fact.Element
 - uid: Manpuku.Edinet.Xbrl.Fact.Nil
   name: Nil
   href: api/Manpuku.Edinet.Xbrl.Fact.html#Manpuku_Edinet_Xbrl_Fact_Nil
@@ -744,28 +1187,47 @@ references:
   commentId: N:Manpuku.Edinet.Xbrl.InlineXBRL
   fullName: Manpuku.Edinet.Xbrl.InlineXBRL
   nameWithType: Manpuku.Edinet.Xbrl.InlineXBRL
+- uid: Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet
+  name: DiscoverableTaxonomySet
+  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html
+  commentId: T:Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet
+  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet
+  nameWithType: DiscoverableTaxonomySet
+- uid: Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.InlineXBRLs
+  name: InlineXBRLs
+  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_InlineXBRL_DiscoverableTaxonomySet_InlineXBRLs
+  commentId: P:Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.InlineXBRLs
+  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.InlineXBRLs
+  nameWithType: DiscoverableTaxonomySet.InlineXBRLs
+- uid: Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.InlineXBRLs*
+  name: InlineXBRLs
+  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html#Manpuku_Edinet_Xbrl_InlineXBRL_DiscoverableTaxonomySet_InlineXBRLs_
+  commentId: Overload:Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.InlineXBRLs
+  isSpec: "True"
+  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.InlineXBRLs
+  nameWithType: DiscoverableTaxonomySet.InlineXBRLs
 - uid: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser
   name: IXbrlParser
   href: api/Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.html
   commentId: T:Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser
   fullName: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser
   nameWithType: IXbrlParser
-- uid: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
-  name: ParseInline(Uri[], Func<Uri, Task<XDocument>>)
-  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInline_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___
-  commentId: M:Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
-  name.vb: ParseInline(Uri(), Func(Of Uri, Task(Of XDocument)))
-  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline(System.Uri[], System.Func<System.Uri, System.Threading.Tasks.Task<System.Xml.Linq.XDocument>>)
-  fullName.vb: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline(System.Uri(), System.Func(Of System.Uri, System.Threading.Tasks.Task(Of System.Xml.Linq.XDocument)))
-  nameWithType: IXbrlParser.ParseInline(Uri[], Func<Uri, Task<XDocument>>)
-  nameWithType.vb: IXbrlParser.ParseInline(Uri(), Func(Of Uri, Task(Of XDocument)))
-- uid: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline*
-  name: ParseInline
-  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInline_
-  commentId: Overload:Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline
+- uid: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
+  name: ParseInlineAsync(Uri[], Func<Uri, Task<XDocument>>)
+  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInlineAsync_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___
+  commentId: M:Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
+  name.vb: ParseInlineAsync(Uri(), Func(Of Uri, Task(Of XDocument)))
+  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync(System.Uri[], System.Func<System.Uri, System.Threading.Tasks.Task<System.Xml.Linq.XDocument>>)
+  fullName.vb: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync(System.Uri(), System.Func(Of System.Uri, System.Threading.Tasks.Task(Of System.Xml.Linq.XDocument)))
+  nameWithType: IXbrlParser.ParseInlineAsync(Uri[], Func<Uri, Task<XDocument>>)
+  nameWithType.vb: IXbrlParser.ParseInlineAsync(Uri(), Func(Of Uri, Task(Of XDocument)))
+- uid: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync*
+  name: ParseInlineAsync
+  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_IXbrlParser_ParseInlineAsync_
+  commentId: Overload:Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync
   isSpec: "True"
-  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInline
-  nameWithType: IXbrlParser.ParseInline
+  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser.ParseInlineAsync
+  nameWithType: IXbrlParser.ParseInlineAsync
 - uid: Manpuku.Edinet.Xbrl.InlineXBRL.XBRLDiscoverableTaxonomySet
   name: XBRLDiscoverableTaxonomySet
   href: api/Manpuku.Edinet.Xbrl.InlineXBRL.XBRLDiscoverableTaxonomySet.html
@@ -902,37 +1364,37 @@ references:
   isSpec: "True"
   fullName: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseAsync
   nameWithType: XbrlParser.ParseAsync
-- uid: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
-  name: ParseInline(Uri[], Func<Uri, Task<XDocument>>)
-  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInline_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___
-  commentId: M:Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
-  name.vb: ParseInline(Uri(), Func(Of Uri, Task(Of XDocument)))
-  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline(System.Uri[], System.Func<System.Uri, System.Threading.Tasks.Task<System.Xml.Linq.XDocument>>)
-  fullName.vb: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline(System.Uri(), System.Func(Of System.Uri, System.Threading.Tasks.Task(Of System.Xml.Linq.XDocument)))
-  nameWithType: XbrlParser.ParseInline(Uri[], Func<Uri, Task<XDocument>>)
-  nameWithType.vb: XbrlParser.ParseInline(Uri(), Func(Of Uri, Task(Of XDocument)))
-- uid: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline*
-  name: ParseInline
-  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInline_
-  commentId: Overload:Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline
+- uid: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
+  name: ParseInlineAsync(Uri[], Func<Uri, Task<XDocument>>)
+  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInlineAsync_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___
+  commentId: M:Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})
+  name.vb: ParseInlineAsync(Uri(), Func(Of Uri, Task(Of XDocument)))
+  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync(System.Uri[], System.Func<System.Uri, System.Threading.Tasks.Task<System.Xml.Linq.XDocument>>)
+  fullName.vb: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync(System.Uri(), System.Func(Of System.Uri, System.Threading.Tasks.Task(Of System.Xml.Linq.XDocument)))
+  nameWithType: XbrlParser.ParseInlineAsync(Uri[], Func<Uri, Task<XDocument>>)
+  nameWithType.vb: XbrlParser.ParseInlineAsync(Uri(), Func(Of Uri, Task(Of XDocument)))
+- uid: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync*
+  name: ParseInlineAsync
+  href: api/Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInlineAsync_
+  commentId: Overload:Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync
   isSpec: "True"
-  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline
-  nameWithType: XbrlParser.ParseInline
+  fullName: Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync
+  nameWithType: XbrlParser.ParseInlineAsync
 - uid: Manpuku.Edinet.Xbrl.Label
   name: Label
   href: api/Manpuku.Edinet.Xbrl.Label.html
   commentId: T:Manpuku.Edinet.Xbrl.Label
   fullName: Manpuku.Edinet.Xbrl.Label
   nameWithType: Label
-- uid: Manpuku.Edinet.Xbrl.Label.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: Label(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.Label.html#Manpuku_Edinet_Xbrl_Label__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.Label.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.Label.Label(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.Label.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: Label.Label(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: Label.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Label.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Label(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Label.html#Manpuku_Edinet_Xbrl_Label__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Label.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Label.Label(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Label.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Label.Label(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Label.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.Label.#ctor*
   name: Label
   href: api/Manpuku.Edinet.Xbrl.Label.html#Manpuku_Edinet_Xbrl_Label__ctor_
@@ -1253,15 +1715,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.Locator
   fullName: Manpuku.Edinet.Xbrl.Locator
   nameWithType: Locator
-- uid: Manpuku.Edinet.Xbrl.Locator.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: Locator(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.Locator.html#Manpuku_Edinet_Xbrl_Locator__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.Locator.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.Locator.Locator(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.Locator.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: Locator.Locator(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: Locator.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Locator.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Locator(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Locator.html#Manpuku_Edinet_Xbrl_Locator__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Locator.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Locator.Locator(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Locator.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Locator.Locator(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Locator.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.Locator.#ctor*
   name: Locator
   href: api/Manpuku.Edinet.Xbrl.Locator.html#Manpuku_Edinet_Xbrl_Locator__ctor_
@@ -1317,15 +1779,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.Reference
   fullName: Manpuku.Edinet.Xbrl.Reference
   nameWithType: Reference
-- uid: Manpuku.Edinet.Xbrl.Reference.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: Reference(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.Reference.html#Manpuku_Edinet_Xbrl_Reference__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.Reference.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.Reference.Reference(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.Reference.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: Reference.Reference(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: Reference.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Reference.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Reference(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Reference.html#Manpuku_Edinet_Xbrl_Reference__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Reference.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Reference.Reference(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Reference.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Reference.Reference(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Reference.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.Reference.#ctor*
   name: Reference
   href: api/Manpuku.Edinet.Xbrl.Reference.html#Manpuku_Edinet_Xbrl_Reference__ctor_
@@ -1355,15 +1817,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.RoleType
   fullName: Manpuku.Edinet.Xbrl.RoleType
   nameWithType: RoleType
-- uid: Manpuku.Edinet.Xbrl.RoleType.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: RoleType(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.RoleType.html#Manpuku_Edinet_Xbrl_RoleType__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.RoleType.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.RoleType.RoleType(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.RoleType.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: RoleType.RoleType(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: RoleType.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.RoleType.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: RoleType(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.RoleType.html#Manpuku_Edinet_Xbrl_RoleType__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.RoleType.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.RoleType.RoleType(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.RoleType.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: RoleType.RoleType(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: RoleType.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.RoleType.#ctor*
   name: RoleType
   href: api/Manpuku.Edinet.Xbrl.RoleType.html#Manpuku_Edinet_Xbrl_RoleType__ctor_
@@ -1432,15 +1894,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.Tuple
   fullName: Manpuku.Edinet.Xbrl.Tuple
   nameWithType: Tuple
-- uid: Manpuku.Edinet.Xbrl.Tuple.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: Tuple(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.Tuple.html#Manpuku_Edinet_Xbrl_Tuple__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.Tuple.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.Tuple.Tuple(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.Tuple.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: Tuple.Tuple(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: Tuple.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Tuple.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Tuple(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Tuple.html#Manpuku_Edinet_Xbrl_Tuple__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Tuple.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Tuple.Tuple(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Tuple.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Tuple.Tuple(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Tuple.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.Tuple.#ctor*
   name: Tuple
   href: api/Manpuku.Edinet.Xbrl.Tuple.html#Manpuku_Edinet_Xbrl_Tuple__ctor_
@@ -1457,15 +1919,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.Tuple.Member
   fullName: Manpuku.Edinet.Xbrl.Tuple.Member
   nameWithType: Tuple.Member
-- uid: Manpuku.Edinet.Xbrl.Tuple.Member.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: Member(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.Tuple.Member.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.Member(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.Tuple.Member.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: Tuple.Member.Member(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: Tuple.Member.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Tuple.Member.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Member(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Tuple.Member.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.Member(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Tuple.Member.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Tuple.Member.Member(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Tuple.Member.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.Tuple.Member.#ctor*
   name: Member
   href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member__ctor_
@@ -1476,32 +1938,32 @@ references:
   fullName.vb: Manpuku.Edinet.Xbrl.Tuple.Member.New
   nameWithType: Tuple.Member.Member
   nameWithType.vb: Tuple.Member.New
-- uid: Manpuku.Edinet.Xbrl.Tuple.Member.Element
-  name: Element
-  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_Element
-  commentId: P:Manpuku.Edinet.Xbrl.Tuple.Member.Element
-  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.Element
-  nameWithType: Tuple.Member.Element
-- uid: Manpuku.Edinet.Xbrl.Tuple.Member.Element*
-  name: Element
-  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_Element_
-  commentId: Overload:Manpuku.Edinet.Xbrl.Tuple.Member.Element
+- uid: Manpuku.Edinet.Xbrl.Tuple.Member.Concept
+  name: Concept
+  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_Concept
+  commentId: P:Manpuku.Edinet.Xbrl.Tuple.Member.Concept
+  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.Concept
+  nameWithType: Tuple.Member.Concept
+- uid: Manpuku.Edinet.Xbrl.Tuple.Member.Concept*
+  name: Concept
+  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_Concept_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Tuple.Member.Concept
   isSpec: "True"
-  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.Element
-  nameWithType: Tuple.Member.Element
-- uid: Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef
-  name: ElementRef
-  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_ElementRef
-  commentId: P:Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef
-  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef
-  nameWithType: Tuple.Member.ElementRef
-- uid: Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef*
-  name: ElementRef
-  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_ElementRef_
-  commentId: Overload:Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef
+  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.Concept
+  nameWithType: Tuple.Member.Concept
+- uid: Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef
+  name: ConceptRef
+  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_ConceptRef
+  commentId: P:Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef
+  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef
+  nameWithType: Tuple.Member.ConceptRef
+- uid: Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef*
+  name: ConceptRef
+  href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_ConceptRef_
+  commentId: Overload:Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef
   isSpec: "True"
-  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef
-  nameWithType: Tuple.Member.ElementRef
+  fullName: Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef
+  nameWithType: Tuple.Member.ConceptRef
 - uid: Manpuku.Edinet.Xbrl.Tuple.Member.MaxOccurs
   name: MaxOccurs
   href: api/Manpuku.Edinet.Xbrl.Tuple.Member.html#Manpuku_Edinet_Xbrl_Tuple_Member_MaxOccurs
@@ -1547,15 +2009,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.TupleFact
   fullName: Manpuku.Edinet.Xbrl.TupleFact
   nameWithType: TupleFact
-- uid: Manpuku.Edinet.Xbrl.TupleFact.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: TupleFact(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.TupleFact.html#Manpuku_Edinet_Xbrl_TupleFact__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.TupleFact.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.TupleFact.TupleFact(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.TupleFact.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: TupleFact.TupleFact(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: TupleFact.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.TupleFact.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: TupleFact(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.TupleFact.html#Manpuku_Edinet_Xbrl_TupleFact__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.TupleFact.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.TupleFact.TupleFact(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.TupleFact.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: TupleFact.TupleFact(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: TupleFact.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.TupleFact.#ctor*
   name: TupleFact
   href: api/Manpuku.Edinet.Xbrl.TupleFact.html#Manpuku_Edinet_Xbrl_TupleFact__ctor_
@@ -1585,15 +2047,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.Unit
   fullName: Manpuku.Edinet.Xbrl.Unit
   nameWithType: Unit
-- uid: Manpuku.Edinet.Xbrl.Unit.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: Unit(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.Unit.html#Manpuku_Edinet_Xbrl_Unit__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.Unit.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.Unit.Unit(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.Unit.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: Unit.Unit(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: Unit.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.Unit.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: Unit(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.Unit.html#Manpuku_Edinet_Xbrl_Unit__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.Unit.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.Unit.Unit(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.Unit.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: Unit.Unit(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: Unit.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.Unit.#ctor*
   name: Unit
   href: api/Manpuku.Edinet.Xbrl.Unit.html#Manpuku_Edinet_Xbrl_Unit__ctor_
@@ -1876,15 +2338,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.XBRLLink
   fullName: Manpuku.Edinet.Xbrl.XBRLLink
   nameWithType: XBRLLink
-- uid: Manpuku.Edinet.Xbrl.XBRLLink.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: XBRLLink(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.XBRLLink.html#Manpuku_Edinet_Xbrl_XBRLLink__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.XBRLLink.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.XBRLLink.XBRLLink(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.XBRLLink.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: XBRLLink.XBRLLink(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: XBRLLink.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.XBRLLink.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: XBRLLink(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.XBRLLink.html#Manpuku_Edinet_Xbrl_XBRLLink__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.XBRLLink.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.XBRLLink.XBRLLink(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.XBRLLink.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: XBRLLink.XBRLLink(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: XBRLLink.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.XBRLLink.#ctor*
   name: XBRLLink
   href: api/Manpuku.Edinet.Xbrl.XBRLLink.html#Manpuku_Edinet_Xbrl_XBRLLink__ctor_
@@ -2056,15 +2518,15 @@ references:
   commentId: T:Manpuku.Edinet.Xbrl.XbrlItem
   fullName: Manpuku.Edinet.Xbrl.XbrlItem
   nameWithType: XbrlItem
-- uid: Manpuku.Edinet.Xbrl.XbrlItem.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name: XbrlItem(XBRLDiscoverableTaxonomySet, XElement)
-  href: api/Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_
-  commentId: M:Manpuku.Edinet.Xbrl.XbrlItem.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)
-  name.vb: New(XBRLDiscoverableTaxonomySet, XElement)
-  fullName: Manpuku.Edinet.Xbrl.XbrlItem.XbrlItem(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  fullName.vb: Manpuku.Edinet.Xbrl.XbrlItem.New(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet, System.Xml.Linq.XElement)
-  nameWithType: XbrlItem.XbrlItem(XBRLDiscoverableTaxonomySet, XElement)
-  nameWithType.vb: XbrlItem.New(XBRLDiscoverableTaxonomySet, XElement)
+- uid: Manpuku.Edinet.Xbrl.XbrlItem.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name: XbrlItem(DiscoverableTaxonomySet, XElement)
+  href: api/Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_
+  commentId: M:Manpuku.Edinet.Xbrl.XbrlItem.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)
+  name.vb: New(DiscoverableTaxonomySet, XElement)
+  fullName: Manpuku.Edinet.Xbrl.XbrlItem.XbrlItem(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  fullName.vb: Manpuku.Edinet.Xbrl.XbrlItem.New(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet, System.Xml.Linq.XElement)
+  nameWithType: XbrlItem.XbrlItem(DiscoverableTaxonomySet, XElement)
+  nameWithType.vb: XbrlItem.New(DiscoverableTaxonomySet, XElement)
 - uid: Manpuku.Edinet.Xbrl.XbrlItem.#ctor*
   name: XbrlItem
   href: api/Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem__ctor_
@@ -2647,12 +3109,12 @@ references:
   isSpec: "True"
   fullName: Manpuku.Edinet.Xbrl.XbrlParser.LoadDtsAsync
   nameWithType: XbrlParser.LoadDtsAsync
-- uid: Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet)
-  name: Parse(XBRLDiscoverableTaxonomySet)
-  href: api/Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_
-  commentId: M:Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet)
-  fullName: Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet)
-  nameWithType: XbrlParser.Parse(XBRLDiscoverableTaxonomySet)
+- uid: Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet)
+  name: Parse(DiscoverableTaxonomySet)
+  href: api/Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_
+  commentId: M:Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet)
+  fullName: Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet)
+  nameWithType: XbrlParser.Parse(DiscoverableTaxonomySet)
 - uid: Manpuku.Edinet.Xbrl.XbrlParser.Parse*
   name: Parse
   href: api/Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_Parse_

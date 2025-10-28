@@ -139,7 +139,7 @@ Class XbrlParser  <a class="header-action link-secondary" title="View source" hr
       <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_LoadDtsAsync_System_Uri_System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___">XbrlParser.LoadDtsAsync(Uri, Func&lt;Uri, Task&lt;XDocument&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_">XbrlParser.Parse(XBRLDiscoverableTaxonomySet)</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_">XbrlParser.Parse(DiscoverableTaxonomySet)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -223,7 +223,7 @@ using the specified document loader.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;XBRLDiscoverableTaxonomySet&gt; LoadDtsAsync(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;DiscoverableTaxonomySet&gt; LoadDtsAsync(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -240,7 +240,7 @@ collection.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
     <dd><p>A task that represents the asynchronous operation. The task result contains an XBRLDiscoverableTaxonomySet
 constructed from the loaded inline XBRL documents and their referenced schema.</p>
 </dd>
@@ -277,7 +277,7 @@ constructed from the loaded inline XBRL documents and their referenced schema.</
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override sealed Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseAsync(Uri entryPointUri, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
+    <pre><code class="lang-csharp hljs">public override sealed Task&lt;DiscoverableTaxonomySet&gt; ParseAsync(Uri entryPointUri, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -292,7 +292,7 @@ constructed from the loaded inline XBRL documents and their referenced schema.</
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
     <dd><p>Never returns; always throws.</p>
 </dd>
   </dl>
@@ -307,16 +307,16 @@ constructed from the loaded inline XBRL documents and their referenced schema.</
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Always thrown. Use <a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInline_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___">ParseInline(Uri[], Func&lt;Uri, Task&lt;XDocument&gt;&gt;)</a> instead.</p>
+    <dd><p>Always thrown. Use <a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.html#Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInlineAsync_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___">ParseInlineAsync(Uri[], Func&lt;Uri, Task&lt;XDocument&gt;&gt;)</a> instead.</p>
 </dd>
   </dl>
 
 
 
-  <a id="Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInline_" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline*"></a>
+  <a id="Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInlineAsync_" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync*"></a>
 
-  <h3 id="Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInline_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInline(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})">
-  ParseInline(Uri[], Func&lt;Uri, Task&lt;XDocument&gt;&gt;)
+  <h3 id="Manpuku_Edinet_Xbrl_InlineXBRL_XbrlParser_ParseInlineAsync_System_Uri___System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___" data-uid="Manpuku.Edinet.Xbrl.InlineXBRL.XbrlParser.ParseInlineAsync(System.Uri[],System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})">
+  ParseInlineAsync(Uri[], Func&lt;Uri, Task&lt;XDocument&gt;&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/InlineXBRL/XbrlParser.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -325,7 +325,7 @@ constructed from the loaded inline XBRL documents and their referenced schema.</
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseInline(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;DiscoverableTaxonomySet&gt; ParseInlineAsync(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -340,8 +340,8 @@ constructed from the loaded inline XBRL documents and their referenced schema.</
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>&gt;</dt>
-    <dd><p>The populated <a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
+    <dd><p>The populated <a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>.</p>
 </dd>
   </dl>
 

@@ -99,7 +99,7 @@ Class XbrlParser  <a class="header-action link-secondary" title="View source" hr
 
   <div class="markdown summary"><p>Top-level XBRL parser coordinating DTS loading and parsing of schema, instance and linkbase documents.
 Use <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_ParseAsync_System_Uri_System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___">ParseAsync(Uri, Func&lt;Uri, Task&lt;XDocument&gt;&gt;)</a> to parse an entry point and produce a
-<a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>.</p>
+<a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -247,7 +247,7 @@ This can be overridden by supplying a custom loader to <a class="xref" href="Man
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;XBRLDiscoverableTaxonomySet&gt; _logger</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;DiscoverableTaxonomySet&gt; _logger</code></pre>
   </div>
 
 
@@ -255,7 +255,7 @@ This can be overridden by supplying a custom loader to <a class="xref" href="Man
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -289,7 +289,7 @@ provided document loader.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;XBRLDiscoverableTaxonomySet&gt; LoadDtsAsync(Uri entryPointUri, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;DiscoverableTaxonomySet&gt; LoadDtsAsync(Uri entryPointUri, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -306,7 +306,7 @@ produces the loaded XDocument.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
     <dd><p>A task that represents the asynchronous operation. The task result contains the loaded
 XBRLDiscoverableTaxonomySet instance.</p>
 </dd>
@@ -324,8 +324,8 @@ XBRLDiscoverableTaxonomySet instance.</p>
 
   <a id="Manpuku_Edinet_Xbrl_XbrlParser_Parse_" data-uid="Manpuku.Edinet.Xbrl.XbrlParser.Parse*"></a>
 
-  <h3 id="Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_" data-uid="Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet)">
-  Parse(XBRLDiscoverableTaxonomySet)
+  <h3 id="Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_" data-uid="Manpuku.Edinet.Xbrl.XbrlParser.Parse(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet)">
+  Parse(DiscoverableTaxonomySet)
   <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/XbrlParser.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -335,12 +335,12 @@ and resolves associated labels, references, and generic links.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Parse(XBRLDiscoverableTaxonomySet dts)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void Parse(DiscoverableTaxonomySet dts)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>dts</code> <a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a></dt>
+    <dt><code>dts</code> <a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a></dt>
     <dd><p>The discoverable taxonomy set to parse. Must not be null.</p>
 </dd>
   </dl>
@@ -352,7 +352,7 @@ and resolves associated labels, references, and generic links.</p>
 
 
 
-  <h4 class="section" id="Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet__remarks">Remarks</h4>
+  <h4 class="section" id="Manpuku_Edinet_Xbrl_XbrlParser_Parse_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method processes the provided taxonomy set by invoking specialized parsers for each XBRL
 component and then resolves additional relationships such as labels, references, and generic links. The method
 is intended to be called as part of a larger XBRL processing workflow and assumes that the input taxonomy set is
@@ -370,12 +370,12 @@ valid and fully loaded.</p>
   </h3>
 
   <div class="markdown level1 summary"><p>Parse XBRL documents starting from the specified entry point URI and using the provided loader to fetch documents.
-The resulting <a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a> contains discovered elements, contexts, units, facts and links.</p>
+The resulting <a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a> contains discovered elements, contexts, units, facts and links.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseAsync(Uri entryPointUri, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;DiscoverableTaxonomySet&gt; ParseAsync(Uri entryPointUri, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -390,8 +390,8 @@ The resulting <a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomy
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous parse operation. The task result is the populated <a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous parse operation. The task result is the populated <a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>.</p>
 </dd>
   </dl>
 

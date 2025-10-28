@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IXbrlParser | edinet-xbrl-parser </title>
+      <title>Enum Concept.BalanceKind | edinet-xbrl-parser </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IXbrlParser | edinet-xbrl-parser ">
+      <meta name="title" content="Enum Concept.BalanceKind | edinet-xbrl-parser ">
       
-      <meta name="description" content="Interface for an XBRL parser.">
+      <meta name="description" content="Specifies the balance kind for a concept (debit, credit, or undefined).">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/manpukupanda/edinet-xbrl-parser/new/main/apiSpec/new?filename=Manpuku_Edinet_Xbrl_IXbrlParser.md&amp;value=---%0Auid%3A%20Manpuku.Edinet.Xbrl.IXbrlParser%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/manpukupanda/edinet-xbrl-parser/new/main/apiSpec/new?filename=Manpuku_Edinet_Xbrl_Concept_BalanceKind.md&amp;value=---%0Auid%3A%20Manpuku.Edinet.Xbrl.Concept.BalanceKind%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,13 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Manpuku.Edinet.Xbrl.IXbrlParser">
+        <article data-uid="Manpuku.Edinet.Xbrl.Concept.BalanceKind">
 
 
 
-  <h1 id="Manpuku_Edinet_Xbrl_IXbrlParser" data-uid="Manpuku.Edinet.Xbrl.IXbrlParser" class="text-break">
-Interface IXbrlParser  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/IXbrlParser.cs/#L8"><i class="bi bi-code-slash"></i></a>
+
+  <h1 id="Manpuku_Edinet_Xbrl_Concept_BalanceKind" data-uid="Manpuku.Edinet.Xbrl.Concept.BalanceKind" class="text-break">
+Enum Concept.BalanceKind  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +98,12 @@ Interface IXbrlParser  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>Manpuku.Edinet.Xbrl.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Interface for an XBRL parser.</p>
+  <div class="markdown summary"><p>Specifies the balance kind for a concept (debit, credit, or undefined).</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IXbrlParser</code></pre>
+    <pre><code class="lang-csharp hljs">public enum Concept.BalanceKind</code></pre>
   </div>
 
 
@@ -113,61 +114,29 @@ Interface IXbrlParser  <a class="header-action link-secondary" title="View sourc
 
 
 
-
-
-
-
-  <h2 class="section" id="methods">Methods
+  <h2 id="fields">Fields
 </h2>
-
-
-  <a id="Manpuku_Edinet_Xbrl_IXbrlParser_ParseAsync_" data-uid="Manpuku.Edinet.Xbrl.IXbrlParser.ParseAsync*"></a>
-
-  <h3 id="Manpuku_Edinet_Xbrl_IXbrlParser_ParseAsync_System_Uri_System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___" data-uid="Manpuku.Edinet.Xbrl.IXbrlParser.ParseAsync(System.Uri,System.Func{System.Uri,System.Threading.Tasks.Task{System.Xml.Linq.XDocument}})">
-  ParseAsync(Uri, Func&lt;Uri, Task&lt;XDocument&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/IXbrlParser.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Parses the specified XBRL documents and returns a discoverable taxonomy set (DTS).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;DiscoverableTaxonomySet&gt; ParseAsync(Uri entryPointUri, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>entryPointUri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
-    <dd><p>The URI of the entry point XBRL instance file (.xbrl) or schema file (.xsd).</p>
+    <dt id="Manpuku_Edinet_Xbrl_Concept_BalanceKind_Credit"><code>Credit = 1</code></dt>
+  
+  <dd><p>Credit balance</p>
 </dd>
-    <dt><code>loader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xdocument">XDocument</a>&gt;&gt;</dt>
-    <dd><p>A function to load an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xdocument">XDocument</a> from a URI.</p>
+    <dt id="Manpuku_Edinet_Xbrl_Concept_BalanceKind_Debit"><code>Debit = 0</code></dt>
+  
+  <dd><p>Debit balance</p>
+</dd>
+    <dt id="Manpuku_Edinet_Xbrl_Concept_BalanceKind_Undefined"><code>Undefined = 2</code></dt>
+  
+  <dd><p>Undefined balance kind</p>
 </dd>
   </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>&gt;</dt>
-    <dd><p>The populated <a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/IXbrlParser.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Concept.cs/#L34" class="edit-link">Edit this page</a>
         </div>
 
 

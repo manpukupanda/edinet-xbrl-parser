@@ -100,6 +100,11 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a></dt>
+      <dd><p>Represents an XBRL concept definition discovered in a taxonomy.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Context.html">Context</a></dt>
       <dd><p>Represents an XBRL context, which defines the reporting period, instant, and scenario information for a specific
 XBRL fact.</p>
@@ -107,7 +112,12 @@ XBRL fact.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Context.ExplicitMember.html">Context.ExplicitMember</a></dt>
-      <dd><p>Represents an explicit member with a specified dimension and member element.</p>
+      <dd><p>Represents an explicit member with a specified dimension and member concept.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a></dt>
+      <dd><p>Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -123,13 +133,8 @@ references to related documents (schema refs, imports, linkbase refs, locs) as c
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.html">Element</a></dt>
-      <dd><p>Represents an XBRL element definition discovered in a taxonomy.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Fact.html">Fact</a></dt>
-      <dd><p>Represents a single XBRL fact value (numeric or non-numeric) associated with an element.</p>
+      <dd><p>Represents a single XBRL fact value (numeric or non-numeric) associated with a concept.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -170,12 +175,12 @@ Each reference contains a sequence of name/value pairs describing the reference.
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Tuple.html">Tuple</a></dt>
-      <dd><p>Represents a tuple element that contains a sequence of member element references.</p>
+      <dd><p>Represents a tuple concept that contains a sequence of member concept references.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Tuple.Member.html">Tuple.Member</a></dt>
-      <dd><p>Represents a member of a tuple, referencing another element.</p>
+      <dd><p>Represents a member of a tuple, referencing another concept.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -186,11 +191,6 @@ Each reference contains a sequence of name/value pairs describing the reference.
     <dl class="jumplist">
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Unit.html">Unit</a></dt>
       <dd><p>Represents a unit definition in an XBRL instance or taxonomy.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a></dt>
-      <dd><p>Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -217,7 +217,7 @@ Each reference contains a sequence of name/value pairs describing the reference.
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html">XbrlParser</a></dt>
       <dd><p>Top-level XBRL parser coordinating DTS loading and parsing of schema, instance and linkbase documents.
 Use <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlParser.html#Manpuku_Edinet_Xbrl_XbrlParser_ParseAsync_System_Uri_System_Func_System_Uri_System_Threading_Tasks_Task_System_Xml_Linq_XDocument___">ParseAsync(Uri, Func&lt;Uri, Task&lt;XDocument&gt;&gt;)</a> to parse an entry point and produce a
-<a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a>.</p>
+<a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -247,18 +247,18 @@ Enums
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.BalanceKind.html">Concept.BalanceKind</a></dt>
+      <dd><p>Specifies the balance kind for a concept (debit, credit, or undefined).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.PeriodKind.html">Concept.PeriodKind</a></dt>
+      <dd><p>Specifies the period type for a concept (duration, instant, or undefined).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Manpuku.Edinet.Xbrl.DocumentTreeNode.DocumentKind.html">DocumentTreeNode.DocumentKind</a></dt>
       <dd><p>Kind of document represented by the node.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.BalanceKind.html">Element.BalanceKind</a></dt>
-      <dd><p>Specifies the balance kind for an element (debit, credit, or undefined).</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.PeriodKind.html">Element.PeriodKind</a></dt>
-      <dd><p>Specifies the period type for an element (duration, instant, or undefined).</p>
 </dd>
     </dl>
     <dl class="jumplist">

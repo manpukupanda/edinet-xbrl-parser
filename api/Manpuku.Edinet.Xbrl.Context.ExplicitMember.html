@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Context.ExplicitMember | edinet-xbrl-parser ">
       
-      <meta name="description" content="Represents an explicit member with a specified dimension and member element.">
+      <meta name="description" content="Represents an explicit member with a specified dimension and member concept.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Manpuku_Edinet_Xbrl_Context_ExplicitMember" data-uid="Manpuku.Edinet.Xbrl.Context.ExplicitMember" class="text-break">
-Class Context.ExplicitMember  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L21"><i class="bi bi-code-slash"></i></a>
+Class Context.ExplicitMember  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class Context.ExplicitMember  <a class="header-action link-secondary" title="Vie
   <dl><dt>Assembly</dt><dd>Manpuku.Edinet.Xbrl.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents an explicit member with a specified dimension and member element.</p>
+  <div class="markdown summary"><p>Represents an explicit member with a specified dimension and member concept.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -148,8 +148,8 @@ Class Context.ExplicitMember  <a class="header-action link-secondary" title="Vie
 
 
   <h2 id="Manpuku_Edinet_Xbrl_Context_ExplicitMember_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>This class is used to define a pair of elements, where each element is represented by an
-instance of the <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html">Element</a> type. Both properties are required and must be initialized during object
+  <div class="markdown level0 remarks"><p>This class is used to define a pair of concepts, where each concept is represented by an
+instance of the <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a> type. Both properties are required and must be initialized during object
 creation.</p>
 </div>
 
@@ -162,15 +162,15 @@ creation.</p>
 
   <h3 id="Manpuku_Edinet_Xbrl_Context_ExplicitMember_Dimension" data-uid="Manpuku.Edinet.Xbrl.Context.ExplicitMember.Dimension">
   Dimension
-  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dimension element associated with this instance.</p>
+  <div class="markdown level1 summary"><p>Gets the dimension concept associated with this instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required Element Dimension { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public required Concept Dimension { get; init; }</code></pre>
   </div>
 
 
@@ -179,7 +179,7 @@ creation.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.html">Element</a></dt>
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a></dt>
     <dd></dd>
   </dl>
 
@@ -194,15 +194,15 @@ creation.</p>
 
   <h3 id="Manpuku_Edinet_Xbrl_Context_ExplicitMember_Member" data-uid="Manpuku.Edinet.Xbrl.Context.ExplicitMember.Member">
   Member
-  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the member element associated with this instance.</p>
+  <div class="markdown level1 summary"><p>Gets the member concept associated with this instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required Element Member { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public required Concept Member { get; init; }</code></pre>
   </div>
 
 
@@ -211,7 +211,7 @@ creation.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.html">Element</a></dt>
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a></dt>
     <dd></dd>
   </dl>
 
@@ -226,7 +226,7 @@ creation.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L21" class="edit-link">Edit this page</a>
+          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Context.cs/#L20" class="edit-link">Edit this page</a>
         </div>
 
 

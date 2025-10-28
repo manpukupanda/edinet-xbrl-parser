@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DiscoverableTaxonomySet | edinet-xbrl-parser </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DiscoverableTaxonomySet | edinet-xbrl-parser ">
+      
+      <meta name="description" content="Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/manpukupanda/edinet-xbrl-parser/new/main/apiSpec/new?filename=Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet.md&amp;value=---%0Auid%3A%20Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="edinet-xbrl-parser">
+            edinet-xbrl-parser
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet">
+
+
+
+  <h1 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet" class="text-break">
+Class DiscoverableTaxonomySet  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Manpuku.html">Manpuku</a>.<a class="xref" href="Manpuku.Edinet.html">Edinet</a>.<a class="xref" href="Manpuku.Edinet.Xbrl.html">Xbrl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Manpuku.Edinet.Xbrl.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DiscoverableTaxonomySet</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DiscoverableTaxonomySet</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinkTrees_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinkTrees" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinkTrees">
+  CalculationLinkTrees
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the calculation link trees, grouped by role type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;RoleType, LinkTree&gt; CalculationLinkTrees { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.html">LinkTree</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinks_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_CalculationLinks" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.CalculationLinks">
+  CalculationLinks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all calculation links in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XBRLLink[] CalculationLinks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.html">XBRLLink</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Concepts_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Concepts" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Concepts">
+  Concepts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all concept definitions discovered in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Concept[] Concepts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Contexts_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Contexts" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Contexts">
+  Contexts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all contexts defined in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Context[] Contexts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Context.html">Context</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinkTrees_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinkTrees" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinkTrees">
+  DefinitionLinkTrees
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the definition link trees, grouped by role type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;RoleType, LinkTree&gt; DefinitionLinkTrees { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.html">LinkTree</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinks_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DefinitionLinks" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DefinitionLinks">
+  DefinitionLinks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all definition links in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XBRLLink[] DefinitionLinks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.html">XBRLLink</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DocumentTree_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_DocumentTree" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.DocumentTree">
+  DocumentTree
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the document tree structure for all documents in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required DocumentTree DocumentTree { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.DocumentTree.html">DocumentTree</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Facts_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Facts" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Facts">
+  Facts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all facts (data points) defined in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Fact[] Facts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Fact.html">Fact</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinkTrees_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinkTrees" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinkTrees">
+  GenericLinkTrees
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the generic link trees, grouped by role type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;RoleType, LinkTree&gt; GenericLinkTrees { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.html">LinkTree</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinks_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_GenericLinks" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.GenericLinks">
+  GenericLinks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all generic links in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XBRLLink[] GenericLinks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.html">XBRLLink</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinkTrees_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinkTrees" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinkTrees">
+  LabelLinkTrees
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the label link trees, grouped by role type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;RoleType, LinkTree&gt; LabelLinkTrees { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.html">LinkTree</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinks_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_LabelLinks" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.LabelLinks">
+  LabelLinks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all label links in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XBRLLink[] LabelLinks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.html">XBRLLink</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Labels_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Labels" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Labels">
+  Labels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all labels associated with concepts in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;Concept, Label[]&gt; Labels { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.Label.html">Label</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinkTrees_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinkTrees" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinkTrees">
+  PresentationLinkTrees
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the presentation link trees, grouped by role type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;RoleType, LinkTree&gt; PresentationLinkTrees { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.html">LinkTree</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinks_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_PresentationLinks" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.PresentationLinks">
+  PresentationLinks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all presentation links in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XBRLLink[] PresentationLinks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.html">XBRLLink</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinkTrees_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinkTrees" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinkTrees">
+  ReferenceLinkTrees
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the reference link trees, grouped by role type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;RoleType, LinkTree&gt; ReferenceLinkTrees { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.LinkTree.html">LinkTree</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinks_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_ReferenceLinks" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.ReferenceLinks">
+  ReferenceLinks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all reference links in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XBRLLink[] ReferenceLinks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.XBRLLink.html">XBRLLink</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_References_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_References" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.References">
+  References
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all references associated with concepts in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;Concept, Reference[]&gt; References { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a>, <a class="xref" href="Manpuku.Edinet.Xbrl.Reference.html">Reference</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_RoleTypes_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_RoleTypes" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.RoleTypes">
+  RoleTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all role types defined in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RoleType[] RoleTypes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.RoleType.html">RoleType</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Units_" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units*"></a>
+
+  <h3 id="Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_Units" data-uid="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.Units">
+  Units
+  <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all units defined in the DTS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unit[] Units { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Unit.html">Unit</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/DiscoverableTaxonomySet.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

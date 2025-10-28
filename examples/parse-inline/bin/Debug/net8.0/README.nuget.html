@@ -7,16 +7,16 @@
       <meta name="title" content="EDINET XBRL Parser | edinet-xbrl-parser ">
       
       
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="../toc.html">
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
       
-      <meta name="docfx:rel" content="../">
+      <meta name="docfx:rel" content="../../../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/README.nuget.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/examples/parse-inline/bin/Debug/net8.0/README.nuget.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="edinet-xbrl-parser">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="edinet-xbrl-parser">
             edinet-xbrl-parser
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -126,7 +126,7 @@ var dts = await parser.ParseAsync(new Uri(&quot;https://example.com/entrypoint.x
 </code></pre>
 <pre><code class="lang-csharp">public interface IXbrlParser
 {
-    Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseInlineAsync(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader);
+    Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseInline(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader);
 }
 </code></pre>
 <p>使用例：</p>
@@ -139,7 +139,7 @@ Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader = async uri =&gt;
     return XDocument.Load(stream);
 };
 
-var dts = await inlineParser.ParseInlineAsync(new[] {
+var dts = await inlineParser.ParseInline(new[] {
     new Uri(&quot;https://example.com/inline1_ixbrl.htm&quot;),
     new Uri(&quot;https://example.com/inline2_ixbrl.htm&quot;)
 }, loader);
@@ -157,7 +157,7 @@ var dts = await inlineParser.ParseInlineAsync(new[] {
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/README.nuget.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/examples/parse-inline/bin/Debug/net8.0/README.nuget.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

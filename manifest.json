@@ -50,6 +50,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Manpuku.Edinet.Xbrl.Concept.BalanceKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Manpuku.Edinet.Xbrl.Concept.BalanceKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Manpuku.Edinet.Xbrl.Concept.BalanceKind",
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Concept.BalanceKind.yml\" sourcestartlinenumber=\"1\">Specifies the balance kind for a concept (debit, credit, or undefined).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Manpuku.Edinet.Xbrl.Concept.PeriodKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Manpuku.Edinet.Xbrl.Concept.PeriodKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Manpuku.Edinet.Xbrl.Concept.PeriodKind",
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Concept.PeriodKind.yml\" sourcestartlinenumber=\"1\">Specifies the period type for a concept (duration, instant, or undefined).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Manpuku.Edinet.Xbrl.Concept.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Manpuku.Edinet.Xbrl.Concept.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Manpuku.Edinet.Xbrl.Concept",
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Concept.yml\" sourcestartlinenumber=\"1\">Represents an XBRL concept definition discovered in a taxonomy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Manpuku.Edinet.Xbrl.Context.ExplicitMember.yml",
       "output": {
         ".html": {
@@ -60,7 +102,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Manpuku.Edinet.Xbrl.Context.ExplicitMember",
-      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Context.ExplicitMember.yml\" sourcestartlinenumber=\"1\">Represents an explicit member with a specified dimension and member element.</p>\n"
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Context.ExplicitMember.yml\" sourcestartlinenumber=\"1\">Represents an explicit member with a specified dimension and member concept.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -75,6 +117,20 @@
       "IsMRef": true,
       "Title": "Manpuku.Edinet.Xbrl.Context",
       "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Context.yml\" sourcestartlinenumber=\"1\">Represents an XBRL context, which defines the reporting period, instant, and scenario information for a specific\nXBRL fact.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet",
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.yml\" sourcestartlinenumber=\"1\">Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -172,7 +228,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Manpuku.Edinet.Xbrl.Fact",
-      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Fact.yml\" sourcestartlinenumber=\"1\">Represents a single XBRL fact value (numeric or non-numeric) associated with an element.</p>\n"
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Fact.yml\" sourcestartlinenumber=\"1\">Represents a single XBRL fact value (numeric or non-numeric) associated with a concept.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -187,6 +243,20 @@
       "IsMRef": true,
       "Title": "Manpuku.Edinet.Xbrl.IXbrlParser",
       "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.IXbrlParser.yml\" sourcestartlinenumber=\"1\">Interface for an XBRL parser.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet",
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.InlineXBRL.DiscoverableTaxonomySet.yml\" sourcestartlinenumber=\"1\">Represents a Discoverable Taxonomy Set (DTS) for Inline XBRL, extending the base DTS with Inline XBRL document support.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -368,7 +438,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Manpuku.Edinet.Xbrl.Tuple.Member",
-      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Tuple.Member.yml\" sourcestartlinenumber=\"1\">Represents a member of a tuple, referencing another element.</p>\n"
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Tuple.Member.yml\" sourcestartlinenumber=\"1\">Represents a member of a tuple, referencing another concept.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -382,7 +452,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Manpuku.Edinet.Xbrl.Tuple",
-      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Tuple.yml\" sourcestartlinenumber=\"1\">Represents a tuple element that contains a sequence of member element references.</p>\n"
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.Tuple.yml\" sourcestartlinenumber=\"1\">Represents a tuple concept that contains a sequence of member concept references.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -508,7 +578,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Manpuku.Edinet.Xbrl.XbrlParser",
-      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.XbrlParser.yml\" sourcestartlinenumber=\"1\">Top-level XBRL parser coordinating DTS loading and parsing of schema, instance and linkbase documents.\nUse <xref href=\"Manpuku.Edinet.Xbrl.XbrlParser.ParseAsync(System.Uri%2cSystem.Func%7bSystem.Uri%2cSystem.Threading.Tasks.Task%7bSystem.Xml.Linq.XDocument%7d%7d)\" data-throw-if-not-resolved=\"false\"></xref> to parse an entry point and produce a\n<xref href=\"Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Manpuku.Edinet.Xbrl.XbrlParser.yml\" sourcestartlinenumber=\"1\">Top-level XBRL parser coordinating DTS loading and parsing of schema, instance and linkbase documents.\nUse <xref href=\"Manpuku.Edinet.Xbrl.XbrlParser.ParseAsync(System.Uri%2cSystem.Func%7bSystem.Uri%2cSystem.Threading.Tasks.Task%7bSystem.Xml.Linq.XDocument%7d%7d)\" data-throw-if-not-resolved=\"false\"></xref> to parse an entry point and produce a\n<xref href=\"Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -610,10 +680,60 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "edinet-xbrl-parser/bin/Debug/net8.0/README.nuget.md",
+      "output": {
+        ".html": {
+          "relative_path": "edinet-xbrl-parser/bin/Debug/net8.0/README.nuget.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "edinet-xbrl-parser/bin/Release/net8.0/README.nuget.md",
       "output": {
         ".html": {
           "relative_path": "edinet-xbrl-parser/bin/Release/net8.0/README.nuget.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/list-documents/bin/Debug/net8.0/README.nuget.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/list-documents/bin/Debug/net8.0/README.nuget.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/list-documents/bin/Release/net8.0/README.nuget.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/list-documents/bin/Release/net8.0/README.nuget.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/parse-inline/bin/Debug/net8.0/README.nuget.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/parse-inline/bin/Debug/net8.0/README.nuget.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/parse-inline/bin/Release/net8.0/README.nuget.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/parse-inline/bin/Release/net8.0/README.nuget.html"
         }
       },
       "version": ""

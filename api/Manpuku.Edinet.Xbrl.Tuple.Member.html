@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Tuple.Member | edinet-xbrl-parser ">
       
-      <meta name="description" content="Represents a member of a tuple, referencing another element.">
+      <meta name="description" content="Represents a member of a tuple, referencing another concept.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class Tuple.Member  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Manpuku.Edinet.Xbrl.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a member of a tuple, referencing another element.</p>
+  <div class="markdown summary"><p>Represents a member of a tuple, referencing another concept.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -168,8 +168,8 @@ Class Tuple.Member  <a class="header-action link-secondary" title="View source" 
 
   <a id="Manpuku_Edinet_Xbrl_Tuple_Member__ctor_" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.#ctor*"></a>
 
-  <h3 id="Manpuku_Edinet_Xbrl_Tuple_Member__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)">
-  Member(XBRLDiscoverableTaxonomySet, XElement)
+  <h3 id="Manpuku_Edinet_Xbrl_Tuple_Member__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)">
+  Member(DiscoverableTaxonomySet, XElement)
   <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Tuple.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -178,12 +178,12 @@ Class Tuple.Member  <a class="header-action link-secondary" title="View source" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Member(XBRLDiscoverableTaxonomySet dts, XElement xml)</code></pre>
+    <pre><code class="lang-csharp hljs">public Member(DiscoverableTaxonomySet dts, XElement xml)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>dts</code> <a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a></dt>
+    <dt><code>dts</code> <a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a></dt>
     <dd><p>The discoverable taxonomy set this member belongs to.</p>
 </dd>
     <dt><code>xml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xelement">XElement</a></dt>
@@ -206,19 +206,19 @@ Class Tuple.Member  <a class="header-action link-secondary" title="View source" 
 </h2>
 
 
-  <a id="Manpuku_Edinet_Xbrl_Tuple_Member_Element_" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.Element*"></a>
+  <a id="Manpuku_Edinet_Xbrl_Tuple_Member_Concept_" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.Concept*"></a>
 
-  <h3 id="Manpuku_Edinet_Xbrl_Tuple_Member_Element" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.Element">
-  Element
+  <h3 id="Manpuku_Edinet_Xbrl_Tuple_Member_Concept" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.Concept">
+  Concept
   <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Tuple.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the resolved element definition for the referenced QName.</p>
+  <div class="markdown level1 summary"><p>Gets the resolved concept definition for the referenced QName.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Element Element { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Concept Concept { get; }</code></pre>
   </div>
 
 
@@ -227,7 +227,7 @@ Class Tuple.Member  <a class="header-action link-secondary" title="View source" 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Element.html">Element</a></dt>
+    <dt><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a></dt>
     <dd></dd>
   </dl>
 
@@ -238,19 +238,19 @@ Class Tuple.Member  <a class="header-action link-secondary" title="View source" 
 
 
 
-  <a id="Manpuku_Edinet_Xbrl_Tuple_Member_ElementRef_" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef*"></a>
+  <a id="Manpuku_Edinet_Xbrl_Tuple_Member_ConceptRef_" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef*"></a>
 
-  <h3 id="Manpuku_Edinet_Xbrl_Tuple_Member_ElementRef" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.ElementRef">
-  ElementRef
+  <h3 id="Manpuku_Edinet_Xbrl_Tuple_Member_ConceptRef" data-uid="Manpuku.Edinet.Xbrl.Tuple.Member.ConceptRef">
+  ConceptRef
   <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Tuple.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the reference to the element (QName) that this member refers to.</p>
+  <div class="markdown level1 summary"><p>Gets the reference to the concept (QName) that this member refers to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required XName ElementRef { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public required XName ConceptRef { get; init; }</code></pre>
   </div>
 
 

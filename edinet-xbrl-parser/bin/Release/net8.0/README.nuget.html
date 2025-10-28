@@ -126,7 +126,7 @@ var dts = await parser.ParseAsync(new Uri(&quot;https://example.com/entrypoint.x
 </code></pre>
 <pre><code class="lang-csharp">public interface IXbrlParser
 {
-    Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseInline(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader);
+    Task&lt;XBRLDiscoverableTaxonomySet&gt; ParseInlineAsync(Uri[] inlineXBRLsURI, Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader);
 }
 </code></pre>
 <p>使用例：</p>
@@ -139,7 +139,7 @@ Func&lt;Uri, Task&lt;XDocument&gt;&gt; loader = async uri =&gt;
     return XDocument.Load(stream);
 };
 
-var dts = await inlineParser.ParseInline(new[] {
+var dts = await inlineParser.ParseInlineAsync(new[] {
     new Uri(&quot;https://example.com/inline1_ixbrl.htm&quot;),
     new Uri(&quot;https://example.com/inline2_ixbrl.htm&quot;)
 }, loader);

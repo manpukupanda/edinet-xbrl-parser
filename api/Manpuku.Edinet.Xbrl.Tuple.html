@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Tuple | edinet-xbrl-parser ">
       
-      <meta name="description" content="Represents a tuple element that contains a sequence of member element references.">
+      <meta name="description" content="Represents a tuple concept that contains a sequence of member concept references.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,12 +97,12 @@ Class Tuple  <a class="header-action link-secondary" title="View source" href="h
   <dl><dt>Assembly</dt><dd>Manpuku.Edinet.Xbrl.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a tuple element that contains a sequence of member element references.</p>
+  <div class="markdown summary"><p>Represents a tuple concept that contains a sequence of member concept references.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Tuple : Element</code></pre>
+    <pre><code class="lang-csharp hljs">public class Tuple : Concept</code></pre>
   </div>
 
 
@@ -113,7 +113,7 @@ Class Tuple  <a class="header-action link-secondary" title="View source" href="h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html">XbrlItem</a></div>
-      <div><a class="xref" href="Manpuku.Edinet.Xbrl.Element.html">Element</a></div>
+      <div><a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html">Concept</a></div>
       <div><span class="xref">Tuple</span></div>
     </dd>
   </dl>
@@ -124,28 +124,28 @@ Class Tuple  <a class="header-action link-secondary" title="View source" href="h
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_TargetNamespace">Element.TargetNamespace</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_TargetNamespace">Concept.TargetNamespace</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_Name">Element.Name</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Name">Concept.Name</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_Abstract">Element.Abstract</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Abstract">Concept.Abstract</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_PeriodType">Element.PeriodType</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_PeriodType">Concept.PeriodType</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_Nillable">Element.Nillable</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Nillable">Concept.Nillable</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_SubstitutionGroup">Element.SubstitutionGroup</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_SubstitutionGroup">Concept.SubstitutionGroup</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_XBRLType">Element.XBRLType</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_XBRLType">Concept.XBRLType</a>
     </div>
     <div>
-      <a class="xref" href="Manpuku.Edinet.Xbrl.Element.html#Manpuku_Edinet_Xbrl_Element_Balance">Element.Balance</a>
+      <a class="xref" href="Manpuku.Edinet.Xbrl.Concept.html#Manpuku_Edinet_Xbrl_Concept_Balance">Concept.Balance</a>
     </div>
     <div>
       <a class="xref" href="Manpuku.Edinet.Xbrl.XbrlItem.html#Manpuku_Edinet_Xbrl_XbrlItem_Dts">XbrlItem.Dts</a>
@@ -193,8 +193,8 @@ Class Tuple  <a class="header-action link-secondary" title="View source" href="h
 
   <a id="Manpuku_Edinet_Xbrl_Tuple__ctor_" data-uid="Manpuku.Edinet.Xbrl.Tuple.#ctor*"></a>
 
-  <h3 id="Manpuku_Edinet_Xbrl_Tuple__ctor_Manpuku_Edinet_Xbrl_XBRLDiscoverableTaxonomySet_System_Xml_Linq_XElement_" data-uid="Manpuku.Edinet.Xbrl.Tuple.#ctor(Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet,System.Xml.Linq.XElement)">
-  Tuple(XBRLDiscoverableTaxonomySet, XElement)
+  <h3 id="Manpuku_Edinet_Xbrl_Tuple__ctor_Manpuku_Edinet_Xbrl_DiscoverableTaxonomySet_System_Xml_Linq_XElement_" data-uid="Manpuku.Edinet.Xbrl.Tuple.#ctor(Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet,System.Xml.Linq.XElement)">
+  Tuple(DiscoverableTaxonomySet, XElement)
   <a class="header-action link-secondary" title="View source" href="https://github.com/manpukupanda/edinet-xbrl-parser/blob/main/edinet-xbrl-parser/Tuple.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -203,12 +203,12 @@ Class Tuple  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Tuple(XBRLDiscoverableTaxonomySet dts, XElement xml)</code></pre>
+    <pre><code class="lang-csharp hljs">public Tuple(DiscoverableTaxonomySet dts, XElement xml)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>dts</code> <a class="xref" href="Manpuku.Edinet.Xbrl.XBRLDiscoverableTaxonomySet.html">XBRLDiscoverableTaxonomySet</a></dt>
+    <dt><code>dts</code> <a class="xref" href="Manpuku.Edinet.Xbrl.DiscoverableTaxonomySet.html">DiscoverableTaxonomySet</a></dt>
     <dd><p>The discoverable taxonomy set this tuple belongs to.</p>
 </dd>
     <dt><code>xml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xelement">XElement</a></dt>
