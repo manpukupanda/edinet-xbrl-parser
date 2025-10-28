@@ -73,7 +73,7 @@ services.AddSingleton<Manpuku.Edinet.Xbrl.InlineXBRL.IXbrlParser, Manpuku.Edinet
 ```csharp
 public interface IXbrlParser
 {
-    Task<XBRLDiscoverableTaxonomySet> ParseInline(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader);
+    Task<XBRLDiscoverableTaxonomySet> ParseInlineAsync(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader);
 }
 ```
 
@@ -88,7 +88,7 @@ Func<Uri, Task<XDocument>> loader = async uri =>
     return XDocument.Load(stream);
 };
 
-var dts = await inlineParser.ParseInline(new[] {
+var dts = await inlineParser.ParseInlineAsync(new[] {
     new Uri("https://example.com/inline1_ixbrl.htm"),
     new Uri("https://example.com/inline2_ixbrl.htm")
 }, loader);

@@ -3,7 +3,7 @@
 namespace Manpuku.Edinet.Xbrl;
 
 /// <summary>
-/// Represents a single XBRL fact value (numeric or non-numeric) associated with an element.
+/// Represents a single XBRL fact value (numeric or non-numeric) associated with a concept.
 /// </summary>
 public class Fact : XbrlItem
 {
@@ -12,14 +12,14 @@ public class Fact : XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this fact belongs to.</param>
     /// <param name="xml">The XML element representing this fact.</param>
-    public Fact(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public Fact(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 
     /// <summary>
-    /// Gets the element definition for this fact.
+    /// Gets the concept definition for this fact.
     /// </summary>
-    public required Element Element { get; init; }
+    public required Concept Concept { get; init; }
 
     /// <summary>
     /// Gets the textual value of the fact, or null if the fact is nil.
@@ -63,7 +63,7 @@ public class TupleFact : Fact
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this tuple fact belongs to.</param>
     /// <param name="xml">The XML element representing this tuple fact.</param>
-    public TupleFact(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public TupleFact(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 }

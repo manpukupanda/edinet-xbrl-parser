@@ -28,7 +28,7 @@ public class LinkTree
     /// </summary>
     private readonly Dictionary<XbrlItem, Relation[]> _relations;
 
-    internal LinkTree(XBRLDiscoverableTaxonomySet dts, RoleType roleType, XBRLLink.LinkKind linkKind)
+    internal LinkTree(DiscoverableTaxonomySet dts, RoleType roleType, XBRLLink.LinkKind linkKind)
     {
         DTS = dts;
         RoleType = roleType;
@@ -53,7 +53,7 @@ public class LinkTree
     /// <summary>
     /// Gets the discoverable taxonomy set (DTS) associated with this link tree.
     /// </summary>
-    public XBRLDiscoverableTaxonomySet DTS { get; init; }
+    public DiscoverableTaxonomySet DTS { get; init; }
 
     /// <summary>
     /// Gets the role type associated with this link tree.

@@ -10,7 +10,7 @@ public class XbrlItem
     /// <summary>
     /// Gets the discoverable taxonomy set to which this item belongs.
     /// </summary>
-    public XBRLDiscoverableTaxonomySet Dts { get; init; }
+    public DiscoverableTaxonomySet Dts { get; init; }
 
     /// <summary>
     /// Gets the base URI of the document that contains this item, if available.
@@ -32,7 +32,7 @@ public class XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this item belongs to.</param>
     /// <param name="xml">The XML element representing this item.</param>
-    public XbrlItem(XBRLDiscoverableTaxonomySet dts, XElement xml)
+    public XbrlItem(DiscoverableTaxonomySet dts, XElement xml)
     {
         Dts = dts;
         Xml = xml;

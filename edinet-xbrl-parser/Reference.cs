@@ -13,7 +13,7 @@ public class Reference : XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this reference belongs to.</param>
     /// <param name="xml">The XML element representing this reference.</param>
-    public Reference(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public Reference(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 

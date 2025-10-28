@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 using System.Xml.Linq;
-using static Manpuku.Edinet.Xbrl.Element;
+using static Manpuku.Edinet.Xbrl.Concept;
 
 namespace Manpuku.Edinet.Xbrl;
 
@@ -11,16 +11,16 @@ internal class XbrlSchemaParser
     readonly ILogger _logger;
 
     /// <summary>
-    /// The discoverable taxonomy set (DTS) that this parser populates with elements and role types.
+    /// The discoverable taxonomy set (DTS) that this parser populates with concepts and role types.
     /// </summary>
-    public XBRLDiscoverableTaxonomySet Dts { get; init; }
+    public DiscoverableTaxonomySet Dts { get; init; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="XbrlSchemaParser"/> class.
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set to populate.</param>
     /// <param name="loggerFactory">Logger factory used to create loggers for diagnostics.</param>
-    public XbrlSchemaParser(XBRLDiscoverableTaxonomySet dts, ILoggerFactory loggerFactory)
+    public XbrlSchemaParser(DiscoverableTaxonomySet dts, ILoggerFactory loggerFactory)
     {
         Dts = dts;
         _loggerFactory = loggerFactory;
@@ -28,20 +28,20 @@ internal class XbrlSchemaParser
     }
 
     /// <summary>
-    /// Parse taxonomy schema documents in the DTS and populate the DTS with discovered elements and role types.
+    /// Parse taxonomy schema documents in the DTS and populate the DTS with discovered concepts and role types.
     /// </summary>
     public void Parse()
     {
-        Dts.Elements = [.. ParseElement()];
-        _logger.LogTrace("ParseElement OK.");
+        Dts.Concepts = [.. ParseConcept()];
+        _logger.LogTrace("ParseConcept OK.");
 
         Dts.RoleTypes = [.. ParseRoleType()];
         _logger.LogTrace("ParseRoleType OK.");
     }
 
-    IEnumerable<Element> ParseElement()
+    IEnumerable<Concept> ParseConcept()
     {
-        var result = new List<Element>();
+        var result = new List<Concept>();
 
         var documents = Dts.GetDocuments(DocumentTreeNode.DocumentKind.TaxonomySchema);
 
@@ -52,8 +52,8 @@ internal class XbrlSchemaParser
             {
                 foreach (var xml in elementRoot.Elements(XbrlNamespaces.xsdElement))
                 {
-                    var element = CreateElement(xml);
-                    result.Add(element);
+                    var concept = CreateConcept(xml);
+                    result.Add(concept);
                 }
             }
         }
@@ -61,7 +61,7 @@ internal class XbrlSchemaParser
         return result;
     }
 
-    Element CreateElement(XElement xml)
+    Concept CreateConcept(XElement xml)
     {
         XNamespace targetNamespace = xml.Document?.Root?.AttributeString(XbrlNamespaces.targetNamespace) ?? throw new InvalidDataException();
 
@@ -105,7 +105,7 @@ internal class XbrlSchemaParser
         else
         {
             return
-                new Element(Dts, xml)
+                new Concept(Dts, xml)
                 {
                     Name = name,
                     Abstract = @abstract,
@@ -122,23 +122,23 @@ internal class XbrlSchemaParser
     {
         var maxOccurs = xml.AttributeInt(XbrlNamespaces.maxOccurs);
         var minOccurs = xml.AttributeInt(XbrlNamespaces.minOccurs);
-        var elementRefStr = xml.AttributeString(XbrlNamespaces.@ref);
-        if (elementRefStr == null)
+        var conceptRefStr = xml.AttributeString(XbrlNamespaces.@ref);
+        if (conceptRefStr == null)
         {
             var (code, message) = XbrlErrorCatalog.MissingAttribute("ref");
             throw new XbrlSyntaxException(code, message);
         }
-        var elementRef = xml.ResolveQName(elementRefStr);
-        if (elementRef == null)
+        var conceptRef = xml.ResolveQName(conceptRefStr);
+        if (conceptRef == null)
         {
-            var (code, message) = XbrlErrorCatalog.UnresolvedQName(elementRefStr);
+            var (code, message) = XbrlErrorCatalog.UnresolvedQName(conceptRefStr);
             throw new XbrlSyntaxException(code, message);
         }
         return new Tuple.Member(Dts, xml)
         {
             MaxOccurs = maxOccurs,
             MinOccurs = minOccurs,
-            ElementRef = elementRef,
+            ConceptRef = conceptRef,
         };
     }
 

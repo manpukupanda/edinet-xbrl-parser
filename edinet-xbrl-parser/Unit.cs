@@ -12,7 +12,7 @@ public class Unit : XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this unit belongs to.</param>
     /// <param name="xml">The XML element representing this unit.</param>
-    public Unit(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public Unit(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 }

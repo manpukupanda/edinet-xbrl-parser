@@ -12,7 +12,7 @@ public class RoleType : XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this role type belongs to.</param>
     /// <param name="xml">The XML element representing this role type.</param>
-    public RoleType(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public RoleType(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 

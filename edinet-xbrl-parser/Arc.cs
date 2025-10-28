@@ -23,7 +23,7 @@ public class Arc : XbrlItem
         prohibited,
     }
 
-    internal Arc(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    internal Arc(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 

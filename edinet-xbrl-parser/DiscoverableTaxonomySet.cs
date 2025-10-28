@@ -6,11 +6,11 @@ namespace Manpuku.Edinet.Xbrl;
 /// <summary>
 /// Represents a Discoverable Taxonomy Set (DTS) that aggregates taxonomy, instance, and linkbase information discovered from XBRL documents.
 /// </summary>
-public class XBRLDiscoverableTaxonomySet
+public class DiscoverableTaxonomySet
 {
-    private Element[] _elements = [];
-    private ConcurrentDictionary<string, Element>? _elementsByHref = null;
-    private ConcurrentDictionary<XName, Element>? _elementsByName = null;
+    private Concept[] _concepts = [];
+    private ConcurrentDictionary<string, Concept>? _conceptsByHref = null;
+    private ConcurrentDictionary<XName, Concept>? _conceptsByName = null;
 
     /// <summary>
     /// Gets or sets the document tree structure for all documents in the DTS.
@@ -18,23 +18,23 @@ public class XBRLDiscoverableTaxonomySet
     public required DocumentTree DocumentTree { get; init; }
 
     /// <summary>
-    /// Gets all element definitions discovered in the DTS.
+    /// Gets all concept definitions discovered in the DTS.
     /// </summary>
-    public Element[] Elements
+    public Concept[] Concepts
     {
-        get => _elements;
+        get => _concepts;
         internal set
         {
-            _elements = value;
-            var dic = new ConcurrentDictionary<string, Element>();
-            var dic2 = new ConcurrentDictionary<XName, Element>();
-            foreach (var e in value)
+            _concepts = value;
+            var dic = new ConcurrentDictionary<string, Concept>();
+            var dic2 = new ConcurrentDictionary<XName, Concept>();
+            foreach (var c in value)
             {
-                dic.TryAdd(e.ReferenceUri.AbsoluteUri, e);
-                dic2.TryAdd(e.Name, e);
+                dic.TryAdd(c.ReferenceUri.AbsoluteUri, c);
+                dic2.TryAdd(c.Name, c);
             }
-            _elementsByHref = dic;
-            _elementsByName = dic2;
+            _conceptsByHref = dic;
+            _conceptsByName = dic2;
         }
     }
 
@@ -119,43 +119,43 @@ public class XBRLDiscoverableTaxonomySet
     public Dictionary<RoleType, LinkTree> GenericLinkTrees { get; internal set; } = [];
 
     /// <summary>
-    /// Gets all labels associated with elements in the DTS.
+    /// Gets all labels associated with concepts in the DTS.
     /// </summary>
-    public Dictionary<Element, Label[]> Labels { get; internal set; } = [];
+    public Dictionary<Concept, Label[]> Labels { get; internal set; } = [];
 
     /// <summary>
-    /// Gets all references associated with elements in the DTS.
+    /// Gets all references associated with concepts in the DTS.
     /// </summary>
-    public Dictionary<Element, Reference[]> References { get; internal set; } = [];
+    public Dictionary<Concept, Reference[]> References { get; internal set; } = [];
 
     /// <summary>
-    /// Retrieves the element associated with the specified URI, if it exists.
+    /// Retrieves the concept associated with the specified URI, if it exists.
     /// </summary>
-    /// <param name="href">The URI used to locate the corresponding element. The method uses the absolute form of the URI for lookup.</param>
-    /// <returns>The element associated with the specified URI, or null if no such element exists.</returns>
-    internal Element? GetElement(Uri href)
+    /// <param name="href">The URI used to locate the corresponding concept. The method uses the absolute form of the URI for lookup.</param>
+    /// <returns>The concept associated with the specified URI, or null if no such concept exists.</returns>
+    internal Concept? GetConcept(Uri href)
     {
-        if (_elementsByHref == null) return null;
+        if (_conceptsByHref == null) return null;
 
-        if (_elementsByHref.TryGetValue(href.AbsoluteUri, out var element))
+        if (_conceptsByHref.TryGetValue(href.AbsoluteUri, out var concept))
         {
-            return element;
+            return concept;
         }
         return null;
     }
 
     /// <summary>
-    /// Retrieves the element associated with the specified XML name, if it exists.
+    /// Retrieves the concept associated with the specified XML name, if it exists.
     /// </summary>
-    /// <param name="name">The XML qualified name of the element to retrieve.</param>
-    /// <returns>The element associated with the specified name, or null if no such element exists.</returns>
-    internal Element? GetElement(XName name)
+    /// <param name="name">The XML qualified name of the concept to retrieve.</param>
+    /// <returns>The concept associated with the specified name, or null if no such concept exists.</returns>
+    internal Concept? GetConcept(XName name)
     {
-        if (_elementsByName == null) return null;
+        if (_conceptsByName == null) return null;
 
-        if (_elementsByName.TryGetValue(name, out var element))
+        if (_conceptsByName.TryGetValue(name, out var concept))
         {
-            return element;
+            return concept;
         }
         return null;
     }

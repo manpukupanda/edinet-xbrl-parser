@@ -12,6 +12,6 @@ public interface IXbrlParser
     /// </summary>
     /// <param name="inlineXBRLsURI">URIs of all Inline XBRL files to parse.</param>
     /// <param name="loader">Function to load an XDocument from a URI.</param>
-    /// <returns>The populated <see cref="XBRLDiscoverableTaxonomySet"/>.</returns>
-    Task<XBRLDiscoverableTaxonomySet> ParseInline(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader);
+    /// <returns>The populated <see cref="DiscoverableTaxonomySet"/>.</returns>
+    Task<DiscoverableTaxonomySet> ParseInlineAsync(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader);
 }

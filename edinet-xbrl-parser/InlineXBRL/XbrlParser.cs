@@ -22,8 +22,8 @@ public class XbrlParser : Xbrl.XbrlParser, IXbrlParser
     /// <param name="entryPointUri">Entry point URI (not used).</param>
     /// <param name="loader">Loader function (not used).</param>
     /// <returns>Never returns; always throws.</returns>
-    /// <exception cref="InvalidOperationException">Always thrown. Use <see cref="ParseInline"/> instead.</exception>
-    public sealed override async Task<Xbrl.XBRLDiscoverableTaxonomySet> ParseAsync(Uri entryPointUri, Func<Uri, Task<XDocument>> loader)
+    /// <exception cref="InvalidOperationException">Always thrown. Use <see cref="ParseInlineAsync"/> instead.</exception>
+    public sealed override async Task<Xbrl.DiscoverableTaxonomySet> ParseAsync(Uri entryPointUri, Func<Uri, Task<XDocument>> loader)
     {
         throw new InvalidOperationException("Use ParseInline instead of Parse for Inline XBRL documents.");
     }
@@ -33,8 +33,8 @@ public class XbrlParser : Xbrl.XbrlParser, IXbrlParser
     /// </summary>
     /// <param name="inlineXBRLsURI">URIs of all Inline XBRL files to parse.</param>
     /// <param name="loader">Function to load an XDocument from a URI.</param>
-    /// <returns>The populated <see cref="XBRLDiscoverableTaxonomySet"/>.</returns>
-    public async Task<XBRLDiscoverableTaxonomySet> ParseInline(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader)
+    /// <returns>The populated <see cref="DiscoverableTaxonomySet"/>.</returns>
+    public async Task<DiscoverableTaxonomySet> ParseInlineAsync(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader)
     {
         _logger.LogTrace("start DTS load.");
         var dts = await LoadDtsAsync(inlineXBRLsURI, loader);
@@ -57,7 +57,7 @@ public class XbrlParser : Xbrl.XbrlParser, IXbrlParser
     /// constructed from the loaded inline XBRL documents and their referenced schema.</returns>
     /// <exception cref="InvalidDataException">Thrown if any loaded XBRL document does not have a valid root element.</exception>
     /// <exception cref="XbrlSemanticException">Thrown if no schemaRef element is found in any of the provided inline XBRL documents.</exception>
-    protected async Task<XBRLDiscoverableTaxonomySet> LoadDtsAsync(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader)
+    protected async Task<DiscoverableTaxonomySet> LoadDtsAsync(Uri[] inlineXBRLsURI, Func<Uri, Task<XDocument>> loader)
     {
         // 非同期で XDocument を取得
         var loadTasks = inlineXBRLsURI.Select(async uri =>
@@ -103,7 +103,7 @@ public class XbrlParser : Xbrl.XbrlParser, IXbrlParser
 
         var documentTreeLoader = new DocumentTreeLoader(_loggerFactory, loader);
         var tree = await documentTreeLoader.CreateAsync(schema, null);
-        var dts = new XBRLDiscoverableTaxonomySet()
+        var dts = new DiscoverableTaxonomySet()
         {
             DocumentTree = tree,
             InlineXBRLs = [.. ixbrlDocs.Select(x => (x.uri, x.doc))],
@@ -112,10 +112,10 @@ public class XbrlParser : Xbrl.XbrlParser, IXbrlParser
         return dts;
     }
 
-    private protected override (XbrlSchemaParser SchemaParser, Xbrl.XbrlInstanceParser InstanceParser, XbrlLinkbaseParser LinkbaseParser) CreateParsers(Xbrl.XBRLDiscoverableTaxonomySet dts)
+    private protected override (XbrlSchemaParser SchemaParser, Xbrl.XbrlInstanceParser InstanceParser, XbrlLinkbaseParser LinkbaseParser) CreateParsers(Xbrl.DiscoverableTaxonomySet dts)
     {
         return (new XbrlSchemaParser(dts, _loggerFactory),
-                new XbrlInstanceParser((XBRLDiscoverableTaxonomySet)dts, _loggerFactory),
+                new XbrlInstanceParser((DiscoverableTaxonomySet)dts, _loggerFactory),
                 new XbrlLinkbaseParser(dts, _loggerFactory));
     }
 }

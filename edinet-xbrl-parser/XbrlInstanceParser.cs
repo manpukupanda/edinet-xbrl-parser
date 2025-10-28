@@ -9,9 +9,9 @@ internal class XbrlInstanceParser
 
     readonly ILogger _logger;
 
-    public XBRLDiscoverableTaxonomySet Dts { get; init; }
+    public DiscoverableTaxonomySet Dts { get; init; }
 
-    public XbrlInstanceParser(XBRLDiscoverableTaxonomySet dts, ILoggerFactory loggerFactory)
+    public XbrlInstanceParser(DiscoverableTaxonomySet dts, ILoggerFactory loggerFactory)
     {
         Dts = dts;
         _loggerFactory = loggerFactory;
@@ -93,14 +93,14 @@ internal class XbrlInstanceParser
                 throw new XbrlSyntaxException(code, message);
             }
 
-            var dimensionElement = Dts.GetElement(dimensionName);
+            var dimensionElement = Dts.GetConcept(dimensionName);
             if (dimensionElement == null)
             {
                 var (code, message) = XbrlErrorCatalog.ElementNotFound(dimensionName.ToString());
                 throw new XbrlSemanticException(code, message);
             }
 
-            var memberElement = Dts.GetElement(valueName);
+            var memberElement = Dts.GetConcept(valueName);
             if (memberElement == null)
             {
                 var (code, message) = XbrlErrorCatalog.ElementNotFound(valueName.ToString());
@@ -157,8 +157,8 @@ internal class XbrlInstanceParser
 
     protected Fact CreateFact(XElement xml)
     {
-        var element = Dts.GetElement(xml.Name);
-        if (element == null)
+        var concept = Dts.GetConcept(xml.Name);
+        if (concept == null)
         {
             var (code, message) = XbrlErrorCatalog.ElementNotFound(xml.Name.ToString());
             throw new XbrlSemanticException(code, message);
@@ -172,7 +172,7 @@ internal class XbrlInstanceParser
             var member = xml.Elements().Select(e => CreateFact(e));
             return new TupleFact(Dts, xml)
             {
-                Element = element,
+                Concept = concept,
                 Value = value,
                 Nil = nil,
                 Context = null,
@@ -186,7 +186,7 @@ internal class XbrlInstanceParser
             var context = GetContext(xml);
             return new Fact(Dts, xml)
             {
-                Element = element,
+                Concept = concept,
                 Value = value,
                 Nil = nil,
                 Context = context,

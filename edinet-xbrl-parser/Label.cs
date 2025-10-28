@@ -12,7 +12,7 @@ public class Label : XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this label belongs to.</param>
     /// <param name="xml">The XML element representing this label.</param>
-    public Label(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public Label(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 

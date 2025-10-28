@@ -12,14 +12,14 @@ internal class XbrlLinkbaseParser
 
     readonly ILogger _logger;
 
-    public XbrlLinkbaseParser(XBRLDiscoverableTaxonomySet dts, ILoggerFactory loggerFactory)
+    public XbrlLinkbaseParser(DiscoverableTaxonomySet dts, ILoggerFactory loggerFactory)
     {
         Dts = dts;
         _loggerFactory = loggerFactory;
         _logger = _loggerFactory.CreateLogger<XbrlLinkbaseParser>();
     }
 
-    public XBRLDiscoverableTaxonomySet Dts { get; init; }
+    public DiscoverableTaxonomySet Dts { get; init; }
 
     public void Parse()
     {
@@ -146,7 +146,7 @@ internal class XbrlLinkbaseParser
             {
                 _uri = new Uri(uri, href);
             }
-            XbrlItem? e = Dts.GetElement(_uri) ?? (XbrlItem?)Dts.RoleTypes.FirstOrDefault(r => r.ReferenceUri.AbsoluteUri == _uri.AbsoluteUri);
+            XbrlItem? e = Dts.GetConcept(_uri) ?? (XbrlItem?)Dts.RoleTypes.FirstOrDefault(r => r.ReferenceUri.AbsoluteUri == _uri.AbsoluteUri);
             if (e == null)
             {
                 var (code, message) = XbrlErrorCatalog.ElementNotFound(_uri.AbsoluteUri);

@@ -3,12 +3,12 @@ using System.Xml.Linq;
 namespace Manpuku.Edinet.Xbrl;
 
 /// <summary>
-/// Represents a tuple element that contains a sequence of member element references.
+/// Represents a tuple concept that contains a sequence of member concept references.
 /// </summary>
-public class Tuple : Element
+public class Tuple : Concept
 {
     /// <summary>
-    /// Represents a member of a tuple, referencing another element.
+    /// Represents a member of a tuple, referencing another concept.
     /// </summary>
     public class Member : XbrlItem
     {
@@ -17,7 +17,7 @@ public class Tuple : Element
         /// </summary>
         /// <param name="dts">The discoverable taxonomy set this member belongs to.</param>
         /// <param name="xml">The XML element representing this tuple member.</param>
-        public Member(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+        public Member(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
         {
         }
 
@@ -32,24 +32,24 @@ public class Tuple : Element
         public required int? MinOccurs { get; init; }
 
         /// <summary>
-        /// Gets the reference to the element (QName) that this member refers to.
+        /// Gets the reference to the concept (QName) that this member refers to.
         /// </summary>
-        public required XName ElementRef { get; init; }
+        public required XName ConceptRef { get; init; }
 
         /// <summary>
-        /// Gets the resolved element definition for the referenced QName.
+        /// Gets the resolved concept definition for the referenced QName.
         /// </summary>
-        public Element Element
+        public Concept Concept
         {
             get
             {
-                var elemnt = Dts.GetElement(ElementRef);
-                if (elemnt == null)
+                var concept = Dts.GetConcept(ConceptRef);
+                if (concept == null)
                 {
-                    var (code, message) = XbrlErrorCatalog.ElementNotFound(ElementRef.ToString());
+                    var (code, message) = XbrlErrorCatalog.ElementNotFound(ConceptRef.ToString());
                     throw new XbrlSemanticException(code, message);
                 }
-                return elemnt;
+                return concept;
             }
         }
     }
@@ -59,7 +59,7 @@ public class Tuple : Element
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this tuple belongs to.</param>
     /// <param name="xml">The XML element representing this tuple.</param>
-    public Tuple(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public Tuple(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 

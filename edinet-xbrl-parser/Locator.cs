@@ -12,7 +12,7 @@ public class Locator : XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this locator belongs to.</param>
     /// <param name="xml">The XML element representing this locator.</param>
-    public Locator(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public Locator(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 

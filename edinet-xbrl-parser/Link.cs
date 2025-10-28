@@ -98,7 +98,7 @@ public class XBRLLink : XbrlItem
     /// </summary>
     /// <param name="dts">The discoverable taxonomy set this link belongs to.</param>
     /// <param name="xml">The XML element representing this link.</param>
-    public XBRLLink(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    public XBRLLink(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 

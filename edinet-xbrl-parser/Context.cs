@@ -11,27 +11,26 @@ namespace Manpuku.Edinet.Xbrl;
 /// instant date, and scenario dimensions.</remarks>
 public class Context : XbrlItem
 {
-
     /// <summary>
-    /// Represents an explicit member with a specified dimension and member element.
+    /// Represents an explicit member with a specified dimension and member concept.
     /// </summary>
-    /// <remarks>This class is used to define a pair of elements, where each element is represented by an
-    /// instance of the <see cref="Element"/> type. Both properties are required and must be initialized during object
+    /// <remarks>This class is used to define a pair of concepts, where each concept is represented by an
+    /// instance of the <see cref="Concept"/> type. Both properties are required and must be initialized during object
     /// creation.</remarks>
     public class ExplicitMember
     {
         /// <summary>
-        /// Gets the dimension element associated with this instance.
+        /// Gets the dimension concept associated with this instance.
         /// </summary>
-        public required Element Dimension { get; init; }
+        public required Concept Dimension { get; init; }
 
         /// <summary>
-        /// Gets the member element associated with this instance.
+        /// Gets the member concept associated with this instance.
         /// </summary>
-        public required Element Member { get; init; }
+        public required Concept Member { get; init; }
     }
 
-    internal Context(XBRLDiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
+    internal Context(DiscoverableTaxonomySet dts, XElement xml) : base(dts, xml)
     {
     }
 
@@ -40,10 +39,10 @@ public class Context : XbrlItem
     /// </summary>
     public required string StartDate { get; init; }
 
-	/// <summary>
+    /// <summary>
     /// Gets the end date of the event or process in string format.
     /// </summary>
-	public required string EndDate { get; init; }
+    public required string EndDate { get; init; }
 
     /// <summary>
     /// Gets the timestamp representing the exact moment in time.

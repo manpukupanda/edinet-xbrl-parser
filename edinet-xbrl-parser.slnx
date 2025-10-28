@@ -1,3 +1,7 @@
 <Solution>
+  <Folder Name="/examples/">
+    <Project Path="examples/list-documents/list-documents.csproj" Id="43814dcd-e786-490f-9913-b5b1c77c0539" />
+    <Project Path="examples/parse-inline/parse-inline.csproj" Id="2985d494-f2fe-4fb4-b2c7-43be69fb6a30" />
+  </Folder>
   <Project Path="edinet-xbrl-parser/edinet-xbrl-parser.csproj" />
 </Solution>

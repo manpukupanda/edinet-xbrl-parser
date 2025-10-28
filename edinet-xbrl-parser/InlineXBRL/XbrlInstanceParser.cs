@@ -5,26 +5,26 @@ using System.Xml.Linq;
 
 namespace Manpuku.Edinet.Xbrl.InlineXBRL;
 
-internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
+internal class XbrlInstanceParser : Manpuku.Edinet.Xbrl.XbrlInstanceParser
 {
-    public XbrlInstanceParser(XBRLDiscoverableTaxonomySet dts, ILoggerFactory loggerFactory) : base(dts, loggerFactory)
+    public XbrlInstanceParser(DiscoverableTaxonomySet dts, ILoggerFactory loggerFactory) : base(dts, loggerFactory)
     {
     }
 
     protected override IEnumerable<Context> ParseContext()
     {
         var result = new List<Context>();
-        var DtsInline = (XBRLDiscoverableTaxonomySet)Dts;
+        var DtsInline = (DiscoverableTaxonomySet)Dts;
 
         foreach (var doc in DtsInline.InlineXBRLs.Select(i => i.Document))
         {
-            foreach (var c in doc.Descendants(Xbrl.XbrlNamespaces.xbrliContext))
+            foreach (var c in doc.Descendants(Manpuku.Edinet.Xbrl.XbrlNamespaces.xbrliContext))
             {
                 var context = new Context(Dts, c)
                 {
-                    StartDate = ParseDate(c, Xbrl.XbrlNamespaces.xbrliStartDate),
-                    EndDate = ParseDate(c, Xbrl.XbrlNamespaces.xbrliEndDate),
-                    Instant = ParseDate(c, Xbrl.XbrlNamespaces.xbrliInstant),
+                    StartDate = ParseDate(c, Manpuku.Edinet.Xbrl.XbrlNamespaces.xbrliStartDate),
+                    EndDate = ParseDate(c, Manpuku.Edinet.Xbrl.XbrlNamespaces.xbrliEndDate),
+                    Instant = ParseDate(c, Manpuku.Edinet.Xbrl.XbrlNamespaces.xbrliInstant),
                     Scenario = ParseScenario(c),
                 };
 
@@ -38,11 +38,11 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
     protected override IEnumerable<Unit> ParseUnit()
     {
         var result = new List<Unit>();
-        var DtsInline = (XBRLDiscoverableTaxonomySet)Dts;
+        var DtsInline = (DiscoverableTaxonomySet)Dts;
 
         foreach (var doc in DtsInline.InlineXBRLs.Select(i => i.Document))
         {
-            var elements = doc.Descendants(Xbrl.XbrlNamespaces.xbrliUnit);
+            var elements = doc.Descendants(Manpuku.Edinet.Xbrl.XbrlNamespaces.xbrliUnit);
             foreach (var xml in elements)
             {
                 var unit = new Unit(Dts, xml);
@@ -56,7 +56,7 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
     protected override IEnumerable<Fact> ParseFact()
     {
         var result = new List<Fact>();
-        var DtsInline = (XBRLDiscoverableTaxonomySet)Dts;
+        var DtsInline = (DiscoverableTaxonomySet)Dts;
 
         foreach (var doc in DtsInline.InlineXBRLs.Select(i => i.Document))
         {
@@ -66,7 +66,7 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
                 {
                     var fact = new Fact(Dts, e)
                     {
-                        Element = GetElement(e),
+                        Concept = GetConcept(e),
                         Value = ParseValue(e),
                         Nil = ParseNil(e),
                         Context = GetContext(e),
@@ -81,7 +81,7 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
         return result;
     }
 
-    Element GetElement(XElement xml)
+    Concept GetConcept(XElement xml)
     {
         var name = xml.AttributeString("name");
         if (name == null)
@@ -95,13 +95,13 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
             var (code, message) = XbrlErrorCatalog.UnresolvedQName(name);
             throw new XbrlParseException(message, code);
         }
-        var element = Dts.GetElement(xname);
-        if (element == null)
+        var concept = Dts.GetConcept(xname);
+        if (concept == null)
         {
             var (code, message) = XbrlErrorCatalog.UnresolvedQName(name);
             throw new XbrlParseException(message, code);
         }
-        return element;
+        return concept;
     }
 
     string? ParseValue(XElement xml)
@@ -142,10 +142,10 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
     static string? TransformValue(XElement xml, string format)
     {
         var formatName = xml.ResolveQName(format);
-        if (formatName != null)
+        switch (formatName?.LocalName)
         {
-            if (formatName.LocalName == "dateerayearmonthdayjp" || formatName.LocalName == "dateyearmonthdaycjk")
-            {
+            case "dateerayearmonthdayjp":
+            case "dateyearmonthdaycjk":
                 if (string.IsNullOrEmpty(xml.Value))
                 {
                     return null;
@@ -156,9 +156,7 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
                     return d.ToString("yyyy-MM-dd");
                 }
                 return xml.Value;
-            }
-            else if (formatName.LocalName == "numdotdecimal")
-            {
+            case "numdotdecimal":
                 if (string.IsNullOrEmpty(xml.Value))
                 {
                     return null;
@@ -173,17 +171,11 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
                 {
                     return xml.Value;
                 }
-            }
-            else if (formatName.LocalName == "booleantrue")
-            {
+            case "booleantrue":
                 return "true";
-            }
-            else if (formatName.LocalName == "booleanfalse")
-            {
+            case "booleanfalse":
                 return "false";
-            }
-            else if (formatName.LocalName == "numunitdecimal")
-            {
+            case "numunitdecimal":
                 var s = xml.Value;
                 if (string.IsNullOrEmpty(s))
                 {
@@ -195,17 +187,17 @@ internal class XbrlInstanceParser : Xbrl.XbrlInstanceParser
                 var match = System.Text.RegularExpressions.Regex.Match(s, @"^([0-9,]*)[^0-9]+([0-9]*)");
                 if (match.Success)
                 {
-                    var v = decimal.Parse(match.Groups[1].Value + "." + match.Groups[2].Value);
-                    return v.ToString();
+                    var v2 = decimal.Parse(match.Groups[1].Value + "." + match.Groups[2].Value);
+                    return v2.ToString();
                 }
                 else
                 {
                     return xml.Value;
                 }
-            }
+            default:
+                var (code, message) = XbrlErrorCatalog.UnknownFormat(format);
+                throw new XbrlParseException(message, code);
         }
-        var (code, message) = XbrlErrorCatalog.UnknownFormat(format);
-        throw new XbrlParseException(message, code);
     }
 
     static bool TryParseJapaneseDate(string input, out DateTime result)
