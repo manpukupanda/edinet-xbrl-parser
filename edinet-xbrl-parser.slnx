@@ -1,7 +1,10 @@
 <Solution>
   <Folder Name="/examples/">
-    <Project Path="examples/list-documents/list-documents.csproj" Id="43814dcd-e786-490f-9913-b5b1c77c0539" />
+    <Project Path="examples/concepts/concepts.csproj" Id="1fd6e3b9-4504-43b8-a03b-bc661e21a9db" />
+    <Project Path="examples/documents/documents.csproj" Id="43814dcd-e786-490f-9913-b5b1c77c0539" />
+    <Project Path="examples/facts/facts.csproj" Id="5e40ece1-3664-40dd-9eea-48b5c91bb120" />
     <Project Path="examples/parse-inline/parse-inline.csproj" Id="2985d494-f2fe-4fb4-b2c7-43be69fb6a30" />
+    <Project Path="examples/relation-link/relation-link.csproj" Id="25d9075f-5e70-4aa3-83ee-a061e94fb765" />
   </Folder>
   <Project Path="edinet-xbrl-parser/edinet-xbrl-parser.csproj" />
 </Solution>

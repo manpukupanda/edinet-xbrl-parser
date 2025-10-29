@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>list_documents</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_cal.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_cal.xml" />
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_def.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_def.xml" />
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab-en.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab-en.xml" />
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab.xml" />
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_pre.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_pre.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\edinet-xbrl-parser\edinet-xbrl-parser.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28.xbrl" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28.xbrl" />
+    <None Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28.xsd" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28.xsd" />
+  </ItemGroup>
+
+</Project>

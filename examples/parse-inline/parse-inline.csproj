@@ -9,6 +9,69 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\data\0000000_header_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0000000_header_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0101010_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0101010_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105010_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105010_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105020_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105020_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105030_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105030_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105040_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105040_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105050_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105050_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105060_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105060_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105070_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105070_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105080_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105080_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105090_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105090_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105100_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105100_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105110_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105110_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0105120_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0105120_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\0200000_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm" Link="data\0200000_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_cal.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_cal.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_def.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_def.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab-en.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab-en.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_pre.xml" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_pre.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.10" />
   </ItemGroup>
 
@@ -17,67 +80,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="data\0000000_header_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0101010_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105010_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105020_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105030_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105040_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105050_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105060_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105070_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105080_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105090_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105100_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105110_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0105120_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\0200000_honbun_jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_ixbrl.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28.xsd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_cal.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_def.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab-en.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_lab.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28_pre.xml">
+    <Folder Include="data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28.xsd" Link="data\jpcrp030000-asr-001_X99001-000_2025-03-31_01_2025-06-28.xsd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
