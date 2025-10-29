@@ -11,6 +11,7 @@ public class DiscoverableTaxonomySet
     private Concept[] _concepts = [];
     private ConcurrentDictionary<string, Concept>? _conceptsByHref = null;
     private ConcurrentDictionary<XName, Concept>? _conceptsByName = null;
+    private Dictionary<XDocument, Uri>? _documentIndex;
 
     /// <summary>
     /// Gets or sets the document tree structure for all documents in the DTS.
@@ -168,14 +169,10 @@ public class DiscoverableTaxonomySet
     /// association is found.</returns>
     internal Uri? GetUriFor(XDocument document)
     {
-        foreach (var node in DocumentTree.Nodes)
-        {
-            if (node.Document == document)
-            {
-                return node.URI;
-            }
-        }
-        return null;
+        _documentIndex ??= DocumentTree.Nodes
+                .GroupBy(n => n.Document)
+                .ToDictionary(g => g.Key, g => g.First().URI);
+        return _documentIndex.TryGetValue(document, out var uri) ? uri : null;
     }
 
     /// <summary>

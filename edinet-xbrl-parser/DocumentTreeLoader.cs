@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Collections.Concurrent;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using static Manpuku.Edinet.Xbrl.DocumentTreeNode;
@@ -95,7 +96,6 @@ internal class DocumentTreeLoader
         }
         catch (Exception ex)
         {
-            // どれか1つでも例外があれば、それを投げる（最初の1つ）
             throw ex.InnerException ?? ex;
         }
     }
@@ -121,22 +121,34 @@ internal class DocumentTreeLoader
         return await CreateNodeAsync(u, node);
     }
 
+    private static readonly ConcurrentDictionary<Uri, XDocument> _cache = new();
+
     internal static async Task<XDocument> LoadAsync(Uri uri)
     {
+        if (_cache.TryGetValue(uri, out var cachedDoc))
+        {
+            return cachedDoc;
+        }
+
+        XDocument doc;
+
         if (uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps)
         {
             using var client = new HttpClient();
             var stream = await client.GetStreamAsync(uri);
-            return await XDocument.LoadAsync(stream, LoadOptions.None, default);
+            doc = await XDocument.LoadAsync(stream, LoadOptions.None, default);
         }
         else if (uri.Scheme == Uri.UriSchemeFile)
         {
             using var stream = File.OpenRead(uri.LocalPath);
-            return await XDocument.LoadAsync(stream, LoadOptions.None, default);
+            doc = await XDocument.LoadAsync(stream, LoadOptions.None, default);
         }
         else
         {
             throw new NotSupportedException($"Unsupported URI scheme: {uri.Scheme}");
         }
+
+        _cache.TryAdd(uri, doc);
+        return doc;
     }
 }
