@@ -8,7 +8,7 @@
     <AssemblyName>Manpuku.Edinet.Xbrl</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>EDINET XBRL Parser</Title>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Authors>manpuku</Authors>
     <Copyright>Copyright © 2025 manpuku. Distributed under the MIT License.</Copyright>
     <PackageProjectUrl>https://github.com/manpukupanda/edinet-xbrl-parser</PackageProjectUrl>
@@ -22,11 +22,8 @@ Its purpose is to extract and transform XBRL files into programmatically accessi
 
 このライブラリは、[EDINET](https://submit2.edinet-fsa.go.jp/)にて開示される XBRL データをパースするための .NET クラスライブラリです。
 金融庁が提供する電子開示システムから取得した XBRL ファイルを解析し、プログラム上で扱いやすい構造に変換することを目的としています。</Description>
-    <PackageReleaseNotes>Fixed minor bugs to improve stability.
-安定性向上のため、軽微なバグを修正しました。
-
-Breaking changes: Renamed several class names for consistency. Please review your code for compatibility.
-破壊的変更: 一部のクラス名を整合性のために変更しました。互換性の確認をお願いします
+    <PackageReleaseNotes>Fixed minor bugs and optimized performance for improved stability.
+安定性向上のため、軽微なバグ修正と内部処理の調整を行いました。
 </PackageReleaseNotes>
   </PropertyGroup>
 
