@@ -8,7 +8,7 @@
     <AssemblyName>Manpuku.Edinet.Xbrl</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>EDINET XBRL Parser</Title>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <Authors>manpuku</Authors>
     <Copyright>Copyright © 2025 manpuku. Distributed under the MIT License.</Copyright>
     <PackageProjectUrl>https://github.com/manpukupanda/edinet-xbrl-parser</PackageProjectUrl>
@@ -25,6 +25,10 @@ Its purpose is to extract and transform XBRL files into programmatically accessi
     <PackageReleaseNotes>Fixed minor bugs and optimized performance for improved stability.
 安定性向上のため、軽微なバグ修正と内部処理の調整を行いました。
 </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
